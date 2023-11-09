@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+}
+
+.conatiner {
+  height: 90%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.conatiner__nav {
+  flex: 20%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.conatiner__nav__title {
+  height: 70%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 20%;
+}
+.conatiner__nav__title p {
+  font-size: 20pt;
+  font-weight: 700;
+}
+.conatiner__nav__search {
+  flex: 70;
+  height: 70%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 7%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.conatiner__nav__search input {
+  height: 45%;
+  width: 70%;
+  font-size: 14pt;
+  border: none;
+  padding-left: 7%;
+  background-color: #ffffff;
+  border-radius: 25px;
+}
+.conatiner__nav__add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  width: 100%;
+  flex: 30%;
+}
+.conatiner__nav__add button {
+  background-color: #2b7b60;
+  border: none;
+  border-radius: 10px;
+  height: 40%;
+  width: 50%;
+  color: #ffffff;
+  font-size: 13pt;
+  font-weight: 500;
+}
+.conatiner__table {
+  flex: 80%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+  height: auto;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.table-container mat-table {
+  border-radius: 0.1px solid #ddd;
+}
+
+.table-container mat-row:hover {
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+.table-container mat-cell {
+  border-bottom: 1px solid rgba(221, 221, 221, 0.1921568627);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 1%;
+}
+
+.table-container mat-cell button {
+  flex: 33%;
+  border: 0.1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15%;
+  padding: 2%;
+}
+
+.table-container mat-header-cell {
+  border-bottom: 0.1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=workers.component.css.map */

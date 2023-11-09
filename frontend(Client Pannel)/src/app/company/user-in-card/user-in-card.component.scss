@@ -1,0 +1,120 @@
+@import "../../mixins";
+@import "../../variables";
+
+.cart {
+  @include boxsize(25vh, 35vw);
+  @include flex-directions(column);
+  border: $border-btn;
+  border-radius: $border-redius;
+  margin-top: 4%;
+
+  &__first {
+    flex: 50%;
+    display: flex;
+    flex-direction: row;
+    @include boxsize(100%, 100%);
+    @include flex(center);
+   
+    &__pic {
+      flex: 15%;
+      @include boxsize(70%, 30%);
+      border-radius: 50%;
+      border: $border-btn;
+      margin-left: 5%;
+      margin-top: 3%;
+      @include flex(center);
+      background-size: cover;
+      img{
+        @include boxsize(100%, 100%);
+      }
+   
+    }
+    &__role {
+      flex: 40%;
+      @include boxsize(100%, 100%);
+      padding-top: 8%;
+      padding-left: 5%;
+    }
+    &__btn {
+      flex: 40%;
+      @include boxsize(100%, 100%);
+      @include flex(center);
+      @include flex-directions(column);
+      &__hour{
+        flex: 50%;
+        @include boxsize(100%, 70%);
+        @include flex-directions(row);
+         padding: 2%;
+         margin-top: 15%;
+         margin-right: 5%;
+         #no{
+          @include boxsize(3vh,3vw);
+          cursor: pointer;
+         }
+         button{
+          border-style: none;
+          border-radius: 50%;
+          @include boxsize(70%, 25%);
+          background-color: transparent
+          
+        }
+      }
+      &__pm{
+        flex: 50%;
+        @include boxsize(100%, 100%);
+        display: flex;
+        padding-right: 10%;
+        @include flex(center);
+        margin-right: 25%;
+        button{
+          border-style: none;
+          border-radius: 50%;
+          @include boxsize(70%, 25%);
+          background-color: transparent
+          
+        }
+        #moin{
+            @include boxsize(100%, 100%);
+            color: $secondary-color;
+            cursor: pointer;z-index: 0;
+        }
+        #plus{
+          @include boxsize(100%, 100%);
+            color: $secondary-color;
+            cursor: pointer;
+        }
+      }
+
+    }
+  }
+  &__second {
+    flex: 50%;
+    @include boxsize(100%, 100%);
+    display: flex;
+    flex-direction: column;
+    padding-left: 15%;
+    padding-top: 5%;
+  }
+}
+
+.input-wrapper-skills{
+  flex: 50%;
+  @include flex-directions(row);
+  @include boxsize(100%,100%);
+  @include flex(left);
+  .skill {
+    @include flex(center);
+    margin-left: 10%;
+    p {
+      border: $border-bott;
+      border-radius: $border-redius;
+      @include flex(center);
+      padding: 5px;
+      background-color:$background-skill ;
+    }
+  }
+  #reste{
+    margin-left: 5%;
+  }
+}
+  

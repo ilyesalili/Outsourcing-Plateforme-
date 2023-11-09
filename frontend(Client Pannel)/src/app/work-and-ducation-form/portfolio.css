@@ -1,0 +1,199 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+}
+
+.perso-info-wc__prot {
+  height: auto;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3%;
+  border: 0.8px solid rgba(51, 51, 51, 0.3098039216);
+  border-radius: 10px;
+}
+.perso-info-wc__prot__cat {
+  margin-top: 3%;
+  margin-bottom: 2%;
+  padding-bottom: 2%;
+  border-bottom: 1.5px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 90%;
+}
+.perso-info-wc__prot__cat__title {
+  height: 6vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.perso-info-wc__prot__cat__title__p {
+  flex: 50%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.perso-info-wc__prot__cat__title__p p {
+  font-size: 16pt;
+  font-weight: 500;
+}
+.perso-info-wc__prot__cat__title__btn {
+  flex: 50%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+.perso-info-wc__prot__cat__title__btn button {
+  height: 100%;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1.7px solid #ddd;
+  background-color: #ffffff;
+  cursor: pointer;
+  background-position: center;
+  background-image: url("./../../assets/plus.png");
+  background-repeat: no-repeat;
+  background-size: 30%;
+}
+.perso-info-wc__prot__cat .input-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.perso-info-wc__prot__cat .input-wrapper .skill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4%;
+  height: 100%;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.perso-info-wc__prot__cat .input-wrapper .skill__title {
+  flex: 60%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.perso-info-wc__prot__cat .input-wrapper .skill__title div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.perso-info-wc__prot__cat .input-wrapper .skill__title div:first-child {
+  flex: 70%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.perso-info-wc__prot__cat .input-wrapper .skill__title div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 30%;
+}
+.perso-info-wc__prot__cat .input-wrapper .skill__title div p {
+  font-size: 13pt;
+}
+.perso-info-wc__prot__cat .input-wrapper .skill__title__btn {
+  flex: 50%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+.perso-info-wc__prot__cat .input-wrapper .skill__title__btn button {
+  height: 100%;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1.7px solid #ddd;
+  background-color: #ffffff;
+  cursor: pointer;
+  background-position: center;
+  background-image: url("./../../assets/plus.png");
+  background-repeat: no-repeat;
+  background-size: 30%;
+}
+.perso-info-wc__prot__cat .input-wrapper .skill__date {
+  margin-top: 2%;
+  flex: 20%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 5%;
+}
+.perso-info-wc__prot__cat .input-wrapper .skill__date p {
+  font-size: 12pt;
+  font-weight: 500;
+  color: #3e3e3e;
+}
+.perso-info-wc__prot__cat .input-wrapper .skill__description {
+  margin-top: 2%;
+  flex: 20%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 5%;
+}
+.perso-info-wc__prot__cat .input-wrapper .skill__description p {
+  font-size: 12pt;
+  font-weight: 500;
+}
+.perso-info-wc__prot__cat__detail {
+  margin-top: 2%;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}/*# sourceMappingURL=portfolio.css.map */

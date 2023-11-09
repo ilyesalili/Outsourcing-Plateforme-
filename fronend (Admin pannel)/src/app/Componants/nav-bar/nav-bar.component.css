@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.nav div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.nav__title {
+  flex: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.nav__title p {
+  flex: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-size: 16pt;
+  font-weight: 700;
+  color: #ffffff;
+}
+.nav__title select {
+  flex: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+  width: 100%;
+  margin-right: 10%;
+  border: none;
+  border-radius: 10px;
+  background-color: #002a58;
+  border: 0.1px solid #ddd;
+}
+.nav__title select:optional {
+  padding-left: 3%;
+  color: aliceblue;
+}
+.nav__ul {
+  flex: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  list-style: none;
+  padding-bottom: 30%;
+}
+.nav__ul li {
+  margin-bottom: 2%;
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav__ul li button {
+  height: 60%;
+  width: 80%;
+  font-size: 14pt;
+  color: #ffffff;
+  font-weight: 500;
+  border: 0.1px solid #ddd;
+  border-radius: 10px;
+  background-color: #002a58;
+  cursor: pointer;
+}
+.nav__ul li button:hover {
+  background-color: rgba(240, 248, 255, 0.227);
+}
+.nav__logout {
+  flex: 10%;
+}
+.nav__logout button {
+  height: 60%;
+  width: 70%;
+  font-size: 14pt;
+  color: #ffffff;
+  font-weight: 500;
+  border: 0.1px solid #ddd;
+  border-radius: 10px;
+  background-color: #002a58;
+  cursor: pointer;
+}
+.nav__logout button:hover {
+  background-color: rgba(240, 248, 255, 0.227);
+}
+
+.active {
+  background-color: #2b7b60;
+}/*# sourceMappingURL=nav-bar.component.css.map */

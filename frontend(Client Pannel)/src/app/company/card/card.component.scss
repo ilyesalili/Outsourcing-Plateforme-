@@ -1,0 +1,64 @@
+@import "../../mixins";
+@import "../../variables";
+
+article {
+  @include boxsize(100vh, 100%);
+  background-color: $background-table;
+  @include flex(center);
+  @include flex-directions(column);
+  .nav {
+    flex: 10%;
+    @include boxsize(100%, 100%);
+  }
+  .panier {
+    @include boxsize(100%, 100%);
+    @include flex-directions(column);
+    padding-top: 1%;
+    &__title {
+      margin-top: 10%;
+      flex: 5%;
+      @include boxsize(100%, 100%);
+      @include flex(start);
+      padding-left: 5%;
+      strong {
+        color: $secondary-color;
+        margin-right: 2%;
+        cursor: pointer;
+      }
+    }
+    &__workers {
+      flex: 75%;
+      @include boxsize(70vh, 100%);
+      @include flex-directions(column);
+      &__list {
+        flex: 100%;
+        @include boxsize(auto, 80%);
+        overflow-y: scroll;
+        display: grid;
+        padding-left: 3%;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    &__submit {
+      flex: 20%;
+      margin-top: 2%;
+      margin-bottom: 2%;
+      @include boxsize(100%, 100%);
+      background-color: $background-table;
+      @include flex(end);
+      padding-right: 10%;
+      margin-bottom: 4%;
+      button{
+        @include boxsize(6vh, 15%);
+        border: none;
+        background-color: $praimary-color;
+        color: $bg-white-color;
+        @include font-size(text1_2);
+        @include font-weight(meduim);
+        border-radius: $border-redius;
+        cursor: pointer;
+      }
+
+    }
+  }
+}

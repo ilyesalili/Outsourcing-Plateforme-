@@ -1,0 +1,36 @@
+<article class="upload-cv">
+  <div class="upload-cv__logo">
+    <p>excellence</p>
+  </div>
+  <div class="upload-cv-etat">
+    <img src="./../../assets/all.png" alt="" />
+    <div>
+      <p>Upload your CV</p>
+      <p>Personal informations</p>
+      <p>Work and Education</p>
+    </div>
+  </div>
+  <div class="upload-cv-wc">
+    <div class="upload-cv-wc__input">
+    
+      <label for="file_upload">
+        <img src="./../../assets/upload.png" alt="upload" id="img_file" />
+        <p id="name_file">Upload file</p> 
+      </label>
+      <input
+        id="file_upload"
+        type="file"
+        accept="application/pdf"
+        #fileInput
+        (change)="onFileSelected($event)"
+      />
+    </div>
+  </div>
+  <div class="upload-cv-btn">
+    <strong>Skip</strong>
+    <button type="button" [disabled]="!selectionMade" (click)="GoToNextInfo()">
+      <p>Finish</p>
+      <p><i class="far fa-check"></i></p>
+    </button>
+  </div>
+</article>

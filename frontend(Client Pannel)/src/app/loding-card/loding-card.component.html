@@ -1,0 +1,38 @@
+<article class="upload-card">
+  <div class="upload-card__logo">
+    <p>excellence</p>
+  </div>
+  <div class="upload-card-etat">
+    <img src="./../../assets/card.png" alt="" />
+    <div>
+      <p>Upload your CV</p>
+      <p>ID Card</p>
+      <p>Work and Education</p>
+    </div>
+  </div>
+  <div class="upload-card-wc">
+    <div class="upload-card-wc__input">
+    
+      <label for="file_upload">
+        <img src="./../../assets/upload.png" alt="upload" id="img_file" />
+        <p id="name_file">Upload ID Card</p>
+       
+      </label>
+      <p>*Please make sure to upload it in the &nbsp;&nbsp;&nbsp; form of a pdf
+        with the two sides</p> 
+      <input
+        id="file_upload"
+        type="file"
+        #fileInput
+        (change)="onFileSelected($event)"
+      />
+    </div>
+  </div>
+  <div class="upload-card-btn">
+    <strong (click)="GoBackToPersonalInfo()" style="cursor: pointer;">back</strong>
+    <button type="button" [disabled]="!selectionMade" (click)="GoToNextInfo()">
+      <p>Next</p>
+      <p></p>
+    </button>
+  </div>
+</article>

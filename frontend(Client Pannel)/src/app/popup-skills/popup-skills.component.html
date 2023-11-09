@@ -1,0 +1,24 @@
+<div class="modal" *ngIf="isOpen">
+  <div class="modal-content">
+    <div class="modal-content__title">
+      <div><p id="title">Add Skills</p></div>
+      <div><p>Add skills from the list :</p></div>
+    </div>
+    <div class="modal-content__options">
+      <div *ngFor="let option of skills">
+        <input
+          type="checkbox"
+          [checked]="isSelected(option)"
+          (change)="toggleOptionSelection(option)"
+        />
+        <p>{{ option.name }}</p>
+      </div>
+    </div>
+    <div class="modal-content__buttons">
+      <strong (click)="deleteSelect()">Cancel</strong>
+      <button type="button" [disabled]="selectedOptions.length<0" (click)="SaveSkills()">
+        <p>Next</p>
+      </button>
+    </div>
+  </div>
+</div>

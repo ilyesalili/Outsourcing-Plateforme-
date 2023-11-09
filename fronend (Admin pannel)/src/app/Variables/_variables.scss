@@ -1,0 +1,47 @@
+$praimary-color: #2b7b60;
+$secondary-color: #002a58;
+$gray-color: #3e3e3e;
+$bg-color: #f5f5f5;
+$bg-white-color: #ffffff;
+$input-color:#e3f2ed;
+$popup-color:#c1b8b81f;
+
+$border-bott:1px solid #dddddd31;
+$border-btn:0.1px solid #ddd;
+
+
+
+$border-redius:10px;
+
+
+$font-sizes: (
+
+  "text0":12pt,//
+  "text1": 13pt,//
+  "text1_2":14pt,
+  "text2": 20pt,//
+  "text3": 22pt,//
+  "text4": 40pt,//
+  "text5": 16pt,//
+  "text6": 57pt,
+  "text7": 69pt,
+  "text8": 82pt,
+  "text9": 99pt,
+  "titre_nav":16pt,
+  "title":25pt,
+  "for_forms":10pt,
+  "required":8pt
+);
+
+$font-weights: (
+  "regular": 400,
+  "meduim": 500,
+  "bold": 700,
+);
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+}

@@ -1,0 +1,52 @@
+@import "../../mixins";
+@import "../../variables";
+.cart {
+  @include boxsize(15vh, 60vw);
+  @include flex(center);
+  @include flex-directions(row);
+  margin-top: 2%;
+  padding-left: 5%;
+  border-bottom: $border-bott;
+  &__info {
+    flex: 85%;
+    @include boxsize(100%, 100%);
+    display: block;
+    align-items: center;
+    .role {
+      @include font-size(text1_2);
+      @include font-weight(bold);
+      padding-top: 5%;
+    }
+    .date {
+      @include font-size(text0);
+      @include font-weight(regular);
+      color: $popup-color;
+      padding-top: 5%;
+    }
+    .description {
+      @include font-size(text0);
+      @include font-weight(regular);
+      padding-top: 5%;
+    }
+  }
+  &__actions {
+    flex: 15%;
+    @include boxsize(70%, 100%);
+    @include flex-directions(row);
+    display: flex;
+    justify-content: end;
+    button {
+      @include boxsize(50%,3vw);
+      @include flex(center);
+      margin-left: 5%;
+      border-radius: 50%;
+      border: $border-btn;
+      background-color: $bg-white-color;
+      cursor: pointer;
+      background-position: center;
+      background-image: url("../../../assets/plus.png");
+      background-repeat: no-repeat;
+      background-size: 30%;
+    }
+  }
+}

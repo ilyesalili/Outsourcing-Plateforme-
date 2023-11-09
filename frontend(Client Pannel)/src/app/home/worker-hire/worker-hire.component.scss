@@ -1,0 +1,109 @@
+@import "../../mixins";
+@import "../../variables";
+
+.worker-card {
+  margin-top: 2%;
+  flex: auto;
+  @include boxsize(26vh, 99%);
+  @include flex-directions(column);
+  border-radius: $border-redius;
+  border: $border-bott;
+  cursor: pointer;
+
+  &__information {
+    flex: 50%;
+    @include boxsize(100%, 100%);
+    @include flex(center);
+    margin-top: 1%;
+    &__picandname {
+      flex: 70%;
+      @include boxsize(100%, 100%);
+      @include flex(center);
+      &__pic {
+        flex: 30%;
+        @include flex(center);
+        @include boxsize(100%, 100%);
+        img {
+          padding-top: 5%;
+          @include boxsize(80%, 45%);
+          border-radius: 50%;
+        }
+      }
+      &__info {
+        flex: 70%;
+        display: flex;
+        @include flex-directions(column);
+        align-items: center;
+        p {
+          @include boxsize(100%, 100%);
+          margin-top: 3%;
+        }
+        #category{
+          @include font-size(text2);
+          @include font-weight(meduim)
+        }
+      }
+    }
+    &__add {
+      flex: 30%;
+      @include boxsize(100%, 100%);
+      display: flex;
+      align-items: end;
+      justify-content: flex-end;
+
+      &__fav_btn {
+        flex: 40%;
+        @include boxsize(40%, 10%);
+        border: none;
+        border-radius: 50%;
+        margin-right: 30%;
+      }
+      &__cart_btn {
+        padding-top:100%;
+        flex: 60%;
+        @include boxsize(40%, 60%);
+        border: none;
+        background-color: $praimary-color;
+        padding: 0.8%;
+        color: $bg-white-color;
+        margin-right: 20%;
+        margin-left: 25%;
+        border-radius: $border-redius;
+        @include font-size(text1);
+        cursor: pointer;
+      }
+    }
+  }
+  &__description {
+    flex: 25%;
+    @include boxsize(100%, 100%);
+    padding-top: 1%;
+    padding-left: 8%;
+    padding-right: 10%;
+  }
+  &__skills {
+    flex: 25%;
+    @include boxsize(100%, 100%);
+    @include flex(center);
+    margin-top: 2%;
+    margin-bottom: 1%;
+    ul{
+        list-style: none;
+            @include boxsize(100%, 70%);
+            padding-left: 8%;
+        
+        li{
+            border-radius: $border-redius;
+            padding: 1%;
+            border: $border-btn;
+            background-color: $background-skill;
+            display: inline;
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+    }
+  }
+  &:hover{
+    background-color: #7070701b;
+  }
+}

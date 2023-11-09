@@ -1,0 +1,105 @@
+<article class="company">
+  <div class="company__logo">
+    <p>excellence</p>
+  </div>
+  <div class="company__info">
+    <div class="company__info__title">
+      <p>Informations of the company</p>
+    </div>
+    <form
+      [formGroup]="form"
+      class="company__info__input"
+    >
+      <div class="company__info__input__base">
+        <div class="input-wrapper">
+          <input type="text" formControlName="name" id="name" required />
+          <label for="name">Name Of Company</label>
+          <span
+            *ngIf="
+              form.get('name').touched && form.get('name').hasError('required')
+            "
+            style="color: red"
+            >this field is required <br
+          /></span>
+        </div>
+        <div class="input-wrapper">
+          <input type="text" formControlName="field" id="field" required />
+          <label for="field">Field</label>
+          <span
+            *ngIf="
+              form.get('field').touched &&
+              form.get('field').hasError('required')
+            "
+            style="color: red"
+            >this field is required <br
+          /></span>
+        </div>
+        <div class="input-wrapper">
+          <input type="number" formControlName="size" id="size" required />
+          <label for="size">Number Of Workers On Company</label>
+          <span
+            *ngIf="
+              form.get('size').touched && form.get('size').hasError('required')
+            "
+            style="color: red"
+            >this field is required <br
+          /></span>
+        </div>
+        <div class="input-wrapper">
+          <input type="text" formControlName="website" id="website" required />
+          <label for="website">Website</label>
+          <span
+            *ngIf="
+              form.get('website').touched &&
+              form.get('website').hasError('required')
+            "
+            style="color: red"
+            >this field is required <br
+          /></span>
+        </div>
+        <!-- <div class="input-wrapper">
+          <input type="text" formControlName="type" id="type" required />
+          <label for="type">Comapny Type</label>
+          <span
+            *ngIf="
+              form.get('type').touched && form.get('type').hasError('required')
+            "
+            style="color: red"
+            >this field is required <br
+          /></span>
+        </div> -->
+      </div>
+      <div class="company__info__input__media">
+        <div class="company__info__input__media__cat">
+          <div class="company__info__input__media__cat__title">
+            <div class="company__info__input__media__cat__title__p">
+              <p>Social Media</p>
+            </div>
+            <div class="company__info__input__media__cat__title__btn">
+              <button (click)="openMedia = true"><p></p></button>
+              <app-popup-media
+                [isOpen]="openMedia"
+                *ngIf="openMedia"
+                (close)="openMedia = false"
+                [media]="parentmedias"
+                (mediaChange)="handlemediaChange($event)"
+              ></app-popup-media>
+            </div>
+          </div>
+          <div class="company__info__input__media__cat__reseau">
+            <p *ngIf="parentmedias.length==0">Add a Social Media</p>
+            <ng-container *ngFor="let item of parentmedias"let index:index>
+              <app-media-cart [data]="item"></app-media-cart>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="company__btn">
+    <button type="button" [disabled]="form.invalid" (click)="SendData()">
+      <p>Next</p>
+      <p></p>
+    </button>
+  </div>
+</article>

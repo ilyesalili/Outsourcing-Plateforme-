@@ -1,0 +1,23 @@
+@import '../../mixins';
+@import '../../variables';
+
+.container{
+    @include boxsize(100vh,100%);
+    background-color: $bg-white-color;
+    @include flex(center);
+    @include flex-directions(column);
+
+    
+    nav{
+        flex: 10%;
+        @include boxsize(100%,100%);
+    }
+    &__main{
+        flex: 80%;
+        @include boxsize(80%,80%);
+        @include flex(center);
+        @include flex-directions(column);
+        overflow-y: scroll;
+        background-color: $background-table;
+    }
+}

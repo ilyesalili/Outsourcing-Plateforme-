@@ -1,0 +1,27 @@
+<div class="worker-card">
+  <div class="worker-card__information">
+    <div class="worker-card__information__picandname">
+      <div class="worker-card__information__picandname__pic">
+        <img src="../../../assets/profil.png" alt="" />
+      </div>
+      <div class="worker-card__information__picandname__info">
+        <p id="category">{{ data.category }}</p>
+        <p>{{data.firstName}}&nbsp; {{data.lastName}}</p>
+        <p><strong>{{data.publicPrice}}/$</strong></p><br>
+      </div>
+    </div>
+    <div class="worker-card__information__add">
+      <i class="fas fa-heart" style="color:red;width:10vw ;height: 3vh;"></i>
+      <button class="worker-card__information__add__cart_btn" (click)="changeSelect()">Add to Card +</button>
+    </div>
+  </div>
+  <div class="worker-card__description">
+  
+    <p>hi , ia ilyes alili soft ware hi , ia ilyes alili soft ware hi , ia ilyes alili soft ware hi , ia ilyes alili  .... </p> 
+  </div>
+  <div class="worker-card__skills">
+    <ul *ngFor="let item of data.skills ">
+      <li>{{item.name}}</li>
+    </ul>
+  </div>
+</div>

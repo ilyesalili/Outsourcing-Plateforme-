@@ -1,0 +1,724 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+}
+
+.perso-info-wc__prot {
+  height: auto;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3%;
+  border: 0.8px solid rgba(51, 51, 51, 0.3098039216);
+  border-radius: 10px;
+}
+.perso-info-wc__prot__cat {
+  margin-top: 3%;
+  margin-bottom: 2%;
+  padding-bottom: 2%;
+  border-bottom: 1.5px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 90%;
+}
+.perso-info-wc__prot__cat__title {
+  height: 6vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.perso-info-wc__prot__cat__title__p {
+  flex: 50%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.perso-info-wc__prot__cat__title__p p {
+  font-size: 16pt;
+  font-weight: 500;
+}
+.perso-info-wc__prot__cat__title__btn {
+  flex: 50%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+.perso-info-wc__prot__cat__title__btn button {
+  height: 100%;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1.7px solid #ddd;
+  background-color: #ffffff;
+  cursor: pointer;
+  background-position: center;
+  background-image: url("./../../assets/plus.png");
+  background-repeat: no-repeat;
+  background-size: 30%;
+}
+.perso-info-wc__prot__cat .input-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.perso-info-wc__prot__cat .input-wrapper .skill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4%;
+  height: 100%;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.perso-info-wc__prot__cat .input-wrapper .skill__title {
+  flex: 60%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.perso-info-wc__prot__cat .input-wrapper .skill__title div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.perso-info-wc__prot__cat .input-wrapper .skill__title div:first-child {
+  flex: 70%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.perso-info-wc__prot__cat .input-wrapper .skill__title div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 30%;
+}
+.perso-info-wc__prot__cat .input-wrapper .skill__title div p {
+  font-size: 13pt;
+}
+.perso-info-wc__prot__cat .input-wrapper .skill__title__btn {
+  flex: 50%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+.perso-info-wc__prot__cat .input-wrapper .skill__title__btn button {
+  height: 100%;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1.7px solid #ddd;
+  background-color: #ffffff;
+  cursor: pointer;
+  background-position: center;
+  background-image: url("./../../assets/plus.png");
+  background-repeat: no-repeat;
+  background-size: 30%;
+}
+.perso-info-wc__prot__cat .input-wrapper .skill__date {
+  margin-top: 2%;
+  flex: 20%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 5%;
+}
+.perso-info-wc__prot__cat .input-wrapper .skill__date p {
+  font-size: 12pt;
+  font-weight: 500;
+  color: #3e3e3e;
+}
+.perso-info-wc__prot__cat .input-wrapper .skill__description {
+  margin-top: 2%;
+  flex: 20%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 5%;
+}
+.perso-info-wc__prot__cat .input-wrapper .skill__description p {
+  font-size: 12pt;
+  font-weight: 500;
+}
+.perso-info-wc__prot__cat__detail {
+  margin-top: 2%;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@keyframes slide-right {
+  from {
+    background-position: 70% center;
+  }
+  to {
+    background-position: 80% center;
+  }
+}
+.perso-info {
+  background-color: #ffffff;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.perso-info__logo {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.perso-info__logo p {
+  font-size: 16pt;
+  font-weight: 700;
+  color: #002a58;
+  padding-left: 5%;
+}
+.perso-info-etat {
+  height: 12vh;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.perso-info-etat img {
+  height: 55%;
+  width: 80%;
+}
+.perso-info-etat div {
+  margin-top: 2%;
+  height: 50%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+}
+.perso-info-etat div p {
+  font-size: 12pt;
+  color: #2b7b60;
+  font-weight: 700;
+}
+.perso-info-etat div p:nth-child(2) {
+  padding-left: 1%;
+}
+.perso-info-etat div p:nth-child(1) {
+  padding-left: 5%;
+}
+.perso-info-wc {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2%;
+}
+.perso-info-wc__base {
+  height: 30vh;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 0.8px solid rgba(51, 51, 51, 0.3098039216);
+  border-radius: 10px;
+}
+.perso-info-wc__base div {
+  height: 100%;
+  width: 100%;
+}
+.perso-info-wc__base__title {
+  flex: 30%;
+  align-items: center;
+  display: flex;
+  padding-left: 5%;
+  padding-top: 3%;
+}
+.perso-info-wc__base__title p {
+  font-size: 13pt;
+  font-weight: 500;
+}
+.perso-info-wc__base__second {
+  flex: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.perso-info-wc__base__second div {
+  flex: 50%;
+  height: 100%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.perso-info-wc__base__second div .input-wrapper {
+  height: 60%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.perso-info-wc__base__second div .input-wrapper__para {
+  margin-top: 2%;
+  font-size: 10pt;
+}
+.perso-info-wc__base__second div .input-wrapper .span_show {
+  position: relative;
+  top: -70%;
+  cursor: pointer;
+}
+.perso-info-wc__base__second div .input-wrapper input {
+  border: none;
+  border-bottom: 1.5px solid #ddd;
+  height: 75%;
+  width: 80%;
+  font-size: 10pt;
+  padding-top: 2%;
+}
+.perso-info-wc__base__second div .input-wrapper input:focus {
+  outline: none;
+}
+.perso-info-wc__base__second div .input-wrapper input:focus + label {
+  transform: translateY(-15px);
+  font-size: 10pt;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.perso-info-wc__base__second div .input-wrapper input:valid + .form-label {
+  top: -1rem;
+  font-size: 0.8rem;
+}
+.perso-info-wc__base__second div .input-wrapper label {
+  font-size: 10pt;
+  position: absolute;
+  top: 1%;
+  left: 10%;
+  transition: all 0.2s ease-in-out;
+  color: #999;
+}
+.perso-info-wc__base__second div .input-wrapper span {
+  font-size: 8pt;
+  height: 100%;
+  width: 90%;
+  margin-top: 2%;
+  display: flex;
+  justify-content: end;
+}
+.perso-info-wc__base__second .forskills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 7%;
+  margin-left: 1%;
+}
+.perso-info-wc__base__second .forskills__title {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.perso-info-wc__base__second .forskills__title__p {
+  flex: 50%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 30%;
+  width: 100%;
+}
+.perso-info-wc__base__second .forskills__title__p p {
+  font-size: 10pt;
+  font-weight: 400;
+  color: #999;
+}
+.perso-info-wc__base__second .forskills__title__btn {
+  flex: 50%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+.perso-info-wc__base__second .forskills__title__btn button {
+  height: 100%;
+  width: 18%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1.7px solid #ddd;
+  background-color: #ffffff;
+  cursor: pointer;
+  background-position: center;
+  background-image: url("./../../assets/plus.png");
+  background-repeat: no-repeat;
+  background-size: 30%;
+}
+.perso-info-wc__base__second .forskills .input-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  border-bottom: 1.5px solid #ddd;
+}
+.perso-info-wc__base__second .forskills .input-wrapper .skill {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.perso-info-wc__base__second .forskills .input-wrapper .skill p {
+  border: 1.5px solid #ddd;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+.perso-info-wc__base__second .forskills .input-wrapper .skill p:hover {
+  color: #ffffff;
+  background-color: #2b7b60;
+  font-weight: 500;
+  cursor: pointer;
+}
+.perso-info-wc__base__third {
+  flex: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.perso-info-wc__base__third div {
+  flex: 50%;
+  height: 100%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.perso-info-wc__base__third div .input-wrapper {
+  height: 60%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.perso-info-wc__base__third div .input-wrapper__para {
+  margin-top: 2%;
+  font-size: 10pt;
+}
+.perso-info-wc__base__third div .input-wrapper .span_show {
+  position: relative;
+  top: -70%;
+  cursor: pointer;
+}
+.perso-info-wc__base__third div .input-wrapper select {
+  border: none;
+  border-bottom: 1.5px solid #ddd;
+  height: 75%;
+  width: 80%;
+  font-size: 10pt;
+  padding-top: 2%;
+}
+.perso-info-wc__base__third div .input-wrapper select:focus {
+  outline: none;
+}
+.perso-info-wc__base__third div .input-wrapper select:focus + label {
+  transform: translateY(-15px);
+  font-size: 10pt;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.perso-info-wc__base__third div .input-wrapper select:valid + .form-label {
+  top: -1rem;
+  font-size: 0.8rem;
+}
+.perso-info-wc__base__third div .input-wrapper label {
+  font-size: 10pt;
+  position: absolute;
+  top: 1%;
+  left: 10%;
+  transition: all 0.2s ease-in-out;
+  color: #999;
+}
+.perso-info-wc__base__third div .input-wrapper span {
+  font-size: 8pt;
+  height: 100%;
+  width: 80%;
+  margin-top: 2%;
+  display: flex;
+  justify-content: end;
+}
+.perso-info-wc__rate {
+  height: 10vh;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 3%;
+  border: 0.8px solid rgba(51, 51, 51, 0.3098039216);
+  border-radius: 10px;
+}
+.perso-info-wc__rate__title {
+  flex: 40%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+}
+.perso-info-wc__rate__title p {
+  font-size: 14pt;
+  font-weight: 500;
+}
+.perso-info-wc__rate .input-wrapper {
+  flex: 50%;
+  height: 60%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.perso-info-wc__rate .input-wrapper__para {
+  margin-top: 2%;
+  font-size: 10pt;
+}
+.perso-info-wc__rate .input-wrapper .span_show {
+  position: relative;
+  top: -70%;
+  cursor: pointer;
+}
+.perso-info-wc__rate .input-wrapper input {
+  border: none;
+  border-bottom: 1.5px solid #ddd;
+  height: 75%;
+  width: 80%;
+  font-size: 10pt;
+  padding-top: 2%;
+}
+.perso-info-wc__rate .input-wrapper input:focus {
+  outline: none;
+}
+.perso-info-wc__rate .input-wrapper input:focus + label {
+  transform: translateY(-15px);
+  font-size: 10pt;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.perso-info-wc__rate .input-wrapper input:valid + .form-label {
+  top: -1rem;
+  font-size: 0.8rem;
+}
+.perso-info-wc__rate .input-wrapper label {
+  font-size: 10pt;
+  position: absolute;
+  top: 1%;
+  left: 10%;
+  transition: all 0.2s ease-in-out;
+  color: #999;
+}
+.perso-info-wc__rate .input-wrapper span {
+  font-size: 8pt;
+  height: 100%;
+  width: 80%;
+  margin-top: 2%;
+  display: flex;
+  justify-content: end;
+}
+.perso-info-wc__rate__hr {
+  flex: 10;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.perso-info-wc__rate__hr p {
+  font-size: 14pt;
+  font-weight: 500;
+}
+.perso-info-btn {
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+}
+.perso-info-btn button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 30%;
+  width: 10%;
+  border: none;
+  border-radius: 7px;
+  background-color: #002a58;
+  margin-left: 3%;
+  cursor: pointer;
+}
+.perso-info-btn button p {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 14%;
+  font-weight: 700;
+  font-size: 13pt;
+  color: #ffffff;
+}
+.perso-info-btn button p:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../assets/fleches.png");
+  background-repeat: no-repeat;
+  background-position: 70% center;
+  background-size: 12%;
+}
+.perso-info-btn button:hover p:last-child {
+  animation: slide-right 0.2s ease-in-out forwards;
+}
+.perso-info-btn button:disabled {
+  background-color: rgba(0, 43, 88, 0.6);
+}
+.perso-info-btn button:disabled p:last-child {
+  animation: none;
+}
+
+.create {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 55%;
+  display: flex;
+}
+.create button {
+  height: 30%;
+  width: 45%;
+  border: none;
+  border-radius: 7px;
+  background-color: #002a58;
+  cursor: pointer;
+  flex: 35%;
+}
+.create button p {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 13pt;
+  color: #ffffff;
+}
+.create button:disabled {
+  background-color: rgba(0, 43, 88, 0.6);
+}/*# sourceMappingURL=work-and-ducation-form.component.css.map */

@@ -1,0 +1,93 @@
+@import "../../../Variables/mixins";
+@import "../../../Variables/variables";
+
+.conatiner {
+  @include boxsize(90%, 90%);
+  @include flex(center);
+  @include flex-directions(column);
+
+  &__nav {
+    flex: 20%;
+    width: 90%;
+    @include flex(center);
+    &__title {
+      @include boxsize(70%, 100%);
+      @include flex(center);
+
+      flex: 20%;
+      p {
+        @include font-size(text2);
+        @include font-weight(bold);
+      }
+    }
+    &__search {
+      flex: 70;
+      @include boxsize(70%, 100%);
+      display: flex;
+      align-items: center;
+      padding-left: 7%;
+      @include flex(flex-start);
+      input {
+        @include boxsize(45%, 70%);
+        @include font-size(text1_2);
+        border: none;
+        padding-left: 7%;
+        background-color: $bg-white-color;
+        border-radius: 25px;
+      }
+    }
+    &__add {
+      @include flex(center);
+      @include boxsize(70%, 100%);
+      flex: 30%;
+      button {
+        background-color: $praimary-color;
+        border: none;
+        border-radius: $border-redius;
+        @include boxsize(40%, 50%);
+        color: $bg-white-color;
+        @include font-size(text1);
+        @include font-weight(meduim);
+      }
+    }
+  }
+  &__table {
+    flex: 80%;
+    width: 90%;
+    @include flex(center);
+  }
+}
+
+.table-container {
+  @include flex-directions(column);
+  width: 90%;
+  height: auto;
+  border-radius: $border-redius;
+  background-color: $bg-white-color;
+}
+.table-container mat-table {
+  border-radius: $border-btn;
+}
+.table-container mat-row:hover {
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+.table-container mat-cell {
+  border-bottom: $border-bott;
+  @include flex(center);
+  @include flex-directions(row);
+  padding: 1%;
+}
+.table-container mat-cell button {
+  flex: 33%;
+  border: $border-btn;
+  @include flex(center);
+  margin-right: 15%;
+  padding: 2%;
+}
+
+.table-container mat-header-cell {
+  border-bottom: $border-btn;
+  @include flex(center);
+}

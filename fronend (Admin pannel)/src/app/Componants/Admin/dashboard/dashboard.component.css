@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+}
+
+.container {
+  height: 100%;
+  width: 90%;
+  padding: 5% 0% 0 0%;
+  display: flex;
+  justify-content: space-around;
+  justify-items: center;
+  flex-wrap: wrap;
+}
+
+#value-box {
+  margin-bottom: 20px;
+  height: 45%;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  justify-content: space-around;
+  border-radius: 5px;
+  padding: 20px 20px;
+}
+
+#value-box .text {
+  display: inline-block;
+}
+
+#value-box .value h4 {
+  font-size: 57px;
+  font-weight: 800;
+  color: #04173c;
+}
+
+#value-box .text p {
+  font-size: 20px;
+  color: #3E3E3E;
+  font-weight: 600;
+}
+
+#value-box i {
+  font-size: 27px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  border-radius: 50%;
+  background: purple;
+  color: wheat;
+  margin-right: 15px;
+}
+
+.workers {
+  width: 35%;
+}
+
+.admins {
+  width: 35%;
+}
+
+.clients {
+  width: 55%;
+}
+
+.job {
+  width: 55%;
+}
+
+.baned {
+  width: 95%;
+}/*# sourceMappingURL=dashboard.component.css.map */

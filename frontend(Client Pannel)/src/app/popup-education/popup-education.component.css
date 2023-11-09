@@ -1,0 +1,404 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+}
+
+.modal_education {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(112, 112, 112, 0.3215686275);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content_education {
+  background-color: #ffffff;
+  height: 85vh;
+  width: 45vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.modal-content_education__title {
+  position: relative;
+  flex: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.modal-content_education__title div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.modal-content_education__title div #title {
+  font-size: 14pt;
+  font-weight: 500;
+  position: relative;
+  left: 10%;
+}
+.modal-content_education__title div:nth-child(1) {
+  padding-top: 5%;
+  flex: 60%;
+}
+.modal-content_education__options {
+  flex: 70%;
+  height: 100%;
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  padding-top: 5%;
+}
+.modal-content_education__options form {
+  height: 100%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.modal-content_education__options form .input-wrapper {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  margin-bottom: 3%;
+}
+.modal-content_education__options form .input-wrapper__para {
+  margin-top: 2%;
+  font-size: 10pt;
+}
+.modal-content_education__options form .input-wrapper .span_show {
+  position: relative;
+  top: -70%;
+  cursor: pointer;
+}
+.modal-content_education__options form .input-wrapper input {
+  border: none;
+  border-bottom: 1.5px solid #ddd;
+  height: 80%;
+  width: 100%;
+  font-size: 10pt;
+  padding-top: 2%;
+}
+.modal-content_education__options form .input-wrapper input:focus {
+  outline: none;
+}
+.modal-content_education__options form .input-wrapper input:focus + label {
+  transform: translateY(-15px);
+  font-size: 10pt;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-content_education__options form .input-wrapper input:valid + .form-label {
+  top: -1rem;
+  font-size: 0.8rem;
+}
+.modal-content_education__options form .input-wrapper label {
+  font-size: 10pt;
+  position: absolute;
+  top: 1%;
+  left: 0%;
+  transition: all 0.2s ease-in-out;
+  color: #999;
+}
+.modal-content_education__options form .input-wrapper span {
+  font-size: 8pt;
+  margin-top: 2%;
+  display: flex;
+  justify-content: end;
+}
+.modal-content_education__options form .input-wrapper:nth-child(4) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.modal-content_education__options form .input-wrapper:nth-child(4) .input-wrapper {
+  margin-right: 1%;
+}
+.modal-content_education__options form .input-wrapper:nth-child(5) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.modal-content_education__options form .input-wrapper:nth-child(5) div:nth-child(1) {
+  flex: 10%;
+  height: 100%;
+  width: 100%;
+}
+.modal-content_education__options form .input-wrapper:nth-child(5) div:nth-child(2) {
+  flex: 90%;
+  height: 100%;
+  width: 100%;
+}
+.modal-content_education__options form .input-wrapper:nth-child(5) div:nth-child(2) textarea {
+  min-width: 100%;
+  max-width: 100%;
+  max-height: 10vh;
+  min-height: 100%;
+}
+.modal-content_education__options form .input-wrapper:nth-child(5) input {
+  flex: 90%;
+  border: 1.5px solid #ddd;
+  height: 100%;
+  width: 100%;
+  min-height: 10vh;
+}
+.modal-content_education__buttons {
+  flex: 10%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+  justify-content: end;
+}
+.modal-content_education__buttons button {
+  height: 30%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 7px;
+  background-color: #002a58;
+  margin-left: 3%;
+  margin-right: 3%;
+  cursor: pointer;
+}
+.modal-content_education__buttons button p {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 12pt;
+  color: #ffffff;
+}
+.modal-content_education__buttons button:disabled {
+  background-color: rgba(0, 43, 88, 0.6);
+}
+
+.title {
+  flex: 50%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.title__p {
+  flex: 50%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 30%;
+  width: 100%;
+}
+.title__p p {
+  font-size: 10pt;
+  font-weight: 400;
+  color: #999;
+}
+.title__btn {
+  flex: 50%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+.title__btn button {
+  height: 100%;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1.7px solid #ddd;
+  background-color: #ffffff;
+  cursor: pointer;
+  background-position: center;
+  background-image: url("./../../assets/plus.png");
+  background-repeat: no-repeat;
+  background-size: 30%;
+}
+
+.input-wrapper-skills {
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.input-wrapper-skills .skill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10%;
+}
+.input-wrapper-skills .skill p {
+  border: 1.5px solid #ddd;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+.input-wrapper-skills .skill p:hover {
+  color: #ffffff;
+  background-color: #2b7b60;
+  font-weight: 500;
+  cursor: pointer;
+}
+.input-wrapper-skills #reste {
+  margin-left: 5%;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(112, 112, 112, 0.3215686275);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  height: 70vh;
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.modal-content__title {
+  position: relative;
+  flex: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.modal-content__title div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.modal-content__title div p {
+  position: relative;
+  left: 10%;
+  font-size: 10pt;
+}
+.modal-content__title div #title {
+  font-size: 14pt;
+  font-weight: 500;
+}
+.modal-content__title div:nth-child(1) {
+  padding-top: 5%;
+  flex: 60%;
+}
+.modal-content__title div:nth-child(2) {
+  flex: 40%;
+}
+.modal-content__options {
+  flex: 50%;
+  height: 100%;
+  width: 75%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1.5px solid #ddd;
+  border-bottom: 1.5px solid #ddd;
+  padding-top: 5%;
+}
+.modal-content__options div {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.modal-content__options div p {
+  font-weight: 500;
+  font-size: 13pt;
+}
+.modal-content__buttons {
+  flex: 20%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+  justify-content: end;
+}
+.modal-content__buttons button {
+  height: 30%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 7px;
+  background-color: #002a58;
+  margin-left: 3%;
+  margin-right: 3%;
+  cursor: pointer;
+}
+.modal-content__buttons button p {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 12pt;
+  color: #ffffff;
+}/*# sourceMappingURL=popup-education.component.css.map */

@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+}
+
+.home-company__workers__filter {
+  flex: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 0;
+  min-height: 80vh;
+  border: 1.7px solid #ddd;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(247, 242, 242, 0.4352941176);
+}
+.home-company__workers__filter__title {
+  height: 100%;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.home-company__workers__filter__title p {
+  margin-left: 7%;
+  font-size: 20pt;
+  font-weight: 700;
+}
+.home-company__workers__filter__title button {
+  margin-right: 10%;
+  padding: 3%;
+  height: 50%;
+  width: 30%;
+  background-color: #2b7b60;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 14pt;
+  cursor: pointer;
+}
+.home-company__workers__filter__title button:hover {
+  background-color: rgba(62, 172, 135, 0.7490196078);
+}
+.home-company__workers__filter__filters {
+  height: 100%;
+  width: 100%;
+  flex: 9;
+}
+.home-company__workers__filter__filters__container {
+  position: relative;
+  width: 100%;
+  transition: width 0.3s ease;
+}
+.home-company__workers__filter__filters__container .toggle-button {
+  background-color: #e0e0e0;
+  padding: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+}
+.home-company__workers__filter__filters__container .dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  background-color: #f8f8f8;
+  transition: max-height 0.3s ease;
+}
+.home-company__workers__filter__filters__container .dropdown-content form {
+  display: flex;
+  flex-direction: column;
+}
+.home-company__workers__filter__filters__container .dropdown-content form label {
+  margin-bottom: 5px;
+}
+.home-company__workers__filter__filters__container .dropdown-content form .filter-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.home-company__workers__filter__filters__container .dropdown-content form .filter-list .filter-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.home-company__workers__filter__filters__container.open {
+  width: 100%; /* Expanded width */
+}
+.home-company__workers__filter__filters__container.open .dropdown-content {
+  max-height: 200px;
+  overflow-y: scroll; /* Expanded height */
+}/*# sourceMappingURL=filter.css.map */

@@ -1,0 +1,161 @@
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+<div class="modal_employement" *ngIf="isOpen">
+  <div class="modal-content_employement">
+    <div class="modal-content_employement__title">
+      <div><p id="title">Add Employment</p></div>
+    </div>
+    <div class="modal-content_employement__options">
+      <form [formGroup]="myform" >
+        <div class="input-wrapper">
+          <input type="text" formControlName="title" id="title" required />
+          <label for="title">Title </label>
+          <span
+            *ngIf="
+              myform.get('title')?.touched &&
+              myform.get('title').hasError('required')
+            "
+            style="color: red"
+            >this field is required</span
+          >
+        </div>
+        <div class="input-wrapper">
+          <input type="text" formControlName="company" id="company" required />
+          <label for="company">Company </label>
+          <span
+            *ngIf="
+              myform.get('company')?.touched &&
+              myform.get('company').hasError('required')
+            "
+            style="color: red"
+            >this field is required</span
+          >
+        </div>
+        <div class="input-wrapper">
+          <input type="text" formControlName="city" id="city" required />
+          <label for="city">City</label>
+          <span
+            *ngIf="
+              myform.get('city')?.touched &&
+              myform.get('city').hasError('required')
+            "
+            style="color: red"
+            >this field is required
+            <hr />
+          </span>
+        </div>
+        <div class="input-wrapper">
+          <input type="text" formControlName="country" id="country" required />
+          <label for="country">Country</label>
+          <span
+            *ngIf="
+              myform.get('country')?.touched &&
+              myform.get('country').hasError('required')
+            "
+            style="color: red"
+            >this field is required <br
+          /></span>
+        </div>
+        <div class="input-wrapper">
+          <input
+            type="text"
+            formControlName="position"
+            id="position"
+            required
+          />
+          <label for="position">Position</label>
+          <span
+            *ngIf="
+              myform.get('position').touched &&
+              myform.get('position').hasError('required')
+            "
+            style="color: red"
+            >this field is required <br
+          /></span>
+        </div>
+        <div class="input-wrapper">
+          <div class="input-wrapper">
+            <input type="date" formControlName="from" id="from" required />
+            <label for="from">From</label>
+            <span
+              *ngIf="
+                myform.get('from')?.touched &&
+                myform.get('from').hasError('required')
+              "
+              style="color: red"
+              >this field is required <br
+            /></span>
+          </div>
+          <div class="input-wrapper">
+            <input type="date" formControlName="to" id="to" required />
+            <label for="to">To</label>
+            <span
+              *ngIf="
+                myform.get('to')?.touched &&
+                myform.get('to').hasError('required')
+              "
+              style="color: red"
+              >this field is required <br
+            /></span>
+          </div>
+        </div>
+        <div class="input-wrapper">
+          <div class="title">
+            <div class="title__p">
+              <p>Skills</p>
+            </div>
+            <div class="title__btn">
+              <button (click)="isModalOpenskill = true"><i class="fas fa-plus"></i></button>
+              <app-popup-skills
+                [isOpen]="isModalOpenskill"
+                [skillsSelected]="parentSkills"
+                (close)="isModalOpenskill = false"
+                (skillsChange)="handleSkillsChange($event)"
+              ></app-popup-skills>
+            </div>
+          </div>
+          <div class="input-wrapper-skills">
+            <div
+              class="skill"
+              *ngFor="let item of parentSkills.slice(0, 3)"
+            >
+              <p>{{ item.name }}</p>
+            </div>
+            <p id="reste" *ngIf="parentSkills.length > 3">
+              +{{ parentSkills.length - 3 }}
+            </p>
+          </div>
+        </div>
+        <div class="input-wrapper">
+          <div>
+            <p for="description">Description</p>
+          </div>
+          <div>
+            <textarea
+              type="text"
+              formControlName="description"
+              id="description"
+              rows="5"
+              required
+            ></textarea>
+          </div>
+
+          <span
+            *ngIf="
+              myform.get('description')?.touched &&
+              myform.get('description').hasError('required')
+            "
+            style="color: red"
+            >this field is required
+            <hr />
+          </span>
+        </div>
+      </form>
+    </div>
+    <div class="modal-content_employement__buttons">
+      <strong style="cursor: pointer" (click)="back()">Cancel</strong>
+      <button type="button" [disabled]="myform.invalid" (click)="send_Data()">
+        <p>Send</p>
+      </button>
+    </div>
+  </div>
+</div>

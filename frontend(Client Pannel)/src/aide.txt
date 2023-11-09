@@ -1,0 +1,42 @@
+SASS:
+*Store
+1-Actions:(Class) all actions can acthor do it .
+2-State:-(Class) 
+       @State({name:'how call state when will use',defaults:{}}),
+       -Create inerface for each State (Add,Get,Put,Edit )
+       @Injectable()
+       @Selector()
+-Select:@Select()  On Component if you want to use
+
+
+->Create folder Store:
+  -iside store create (name.actions.ts)
+  -and crate state.ts  
+  -Put all what can do it with this state.  (CRUD) 
+
+->Create folder Model (for all models in App):
+  -Use inertfaces for give a architect for the model 
+
+
+1-initialisate Actions on .action.ts.
+2-Dispatch Action Inside Component.
+3-Create Custom Constructor.
+4-Create State NgXS.
+5-Connect State With Action:
+  -Create Selector on Class od State 
+6-Get Data from State to Component  
+
+
+--Write Http GET request
+  -On services we put paths to access to API  .
+  -import INGECTABLE from Core.
+
+
+
+
+<OutSourcing>
+-need just state for worker and company
+-manage all rest of state with services
+</OutSourcing>
+
+

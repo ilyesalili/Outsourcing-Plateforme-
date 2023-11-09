@@ -1,0 +1,33 @@
+<div class="cart">
+  <div class="cart__first">
+    <div class="cart__first__pic">
+      <img src="../../../assets/profil.png" alt="" />
+    </div>
+    <div class="cart__first__role">
+      <p>{{data.firstName}} | {{data.lastName}}</p>
+      <br />
+      <strong>{{data.publicPrice}}$</strong>
+    </div>
+    <div class="cart__first__btn">
+      <div class="cart__first__btn__hour">Number Of Houres <button (click)="delete()"><i class="fas fa-times-circle" style="color: #d82222;" id="no" ></i></button></div>
+      <div class="cart__first__btn__pm">
+        <button (click)="decrement()"><i class="fas fa-minus-circle" id="moin"></i></button>
+        <p>{{ counter }}</p>
+        <button (click)="increment()" > <i class="fas fa-plus-circle" id="plus"></i></button>
+      </div>
+    </div>
+  </div>
+  <div class="cart__second">
+    <p>
+      You Are Chossing Best Cible 
+      "Excellene Developper" 
+    </p>
+    <div class="input-wrapper-skills">
+      <div class="skill" *ngFor="let item of data.skills">
+        <p>{{ item.name }}</p>
+      </div>
+      <p id="reste" *ngIf="data.skills.length > 3">+{{ data.skills.length - 3 }}</p>
+    </div>
+   
+  </div>
+</div>

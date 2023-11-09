@@ -1,0 +1,55 @@
+ <article class="home-company">
+  <nav>
+    <app-navbar></app-navbar>
+    <img src="../../../assets/hire.png" alt="" /> 
+  </nav>
+
+  <div class="home-company__workers">
+    <!-- <div class="home-company__workers__filter" >
+      <div class="home-company__workers__filter__title">
+        <p>Filter By</p>
+        <button type="submit">Filter</button>
+      </div>
+      <div class="home-company__workers__filter__filters">
+        <div class="home-company__workers__filter__filters__container" [class.open]="isExpanded" (click)="toggleDropdown()">
+          <button class="toggle-button">Filter1</button>
+          <div class="dropdown-content">
+            <form>
+              <label>Filters:</label>
+              <div class="filter-list">
+                <div *ngFor="let filter of filters" class="filter-item">
+                  <label for="filter{{filter.id}}">{{filter.name}}</label>
+                </div>
+              </div>
+        
+            </form>
+          </div>
+        </div>
+        
+      </div>
+    
+      
+    </div> -->
+    <div class="home-company__workers__list">
+      <div class="home-company__workers__list__search">
+        <input type="text" placeholder="Search for talents" />
+        <button
+          class="home-company__workers__list__search__filter"
+          (click)="openFilter = true"
+        >
+          Search
+        </button>
+      </div>
+      <div class="home-company__workers__list__table">
+        <ng-container *ngFor="let item of workers$ |async"let index = index>
+          <app-worker-hire [data]="item" (select)="isSelect(index)" (addToCart)="addToCart(item)" [@moveToCartAnimation]></app-worker-hire>
+        </ng-container>
+      </div>
+      <div class="home-company__workers__list__pages">
+          <button (click)="previousPage()" [disabled]="currentPage === 1">Précédent</button>
+          <button (click)="nextPage()" [disabled]="">Suivant</button>
+      </div>
+    </div>
+  </div>
+  <footer><i class="fas fa-user-circle"></i></footer>
+</article>

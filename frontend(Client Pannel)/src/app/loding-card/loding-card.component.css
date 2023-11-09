@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+}
+
+@keyframes slide-right {
+  from {
+    background-position: 70% center;
+  }
+  to {
+    background-position: 80% center;
+  }
+}
+.upload-card {
+  background-color: #ffffff;
+  height: 98vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.upload-card__logo {
+  flex: 10%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.upload-card__logo p {
+  font-size: 16pt;
+  font-weight: 700;
+  color: #002a58;
+  padding-left: 5%;
+}
+.upload-card-etat {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 10%;
+}
+.upload-card-etat img {
+  height: 50%;
+  width: 70%;
+}
+.upload-card-etat div {
+  margin-top: 2%;
+  height: 50%;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+}
+.upload-card-etat div p {
+  font-size: 12pt;
+}
+.upload-card-etat div p:nth-child(2),
+.upload-card-etat div p:nth-child(1) {
+  padding-left: 3%;
+}
+.upload-card-etat div p:nth-child(2):nth-child(1),
+.upload-card-etat div p:nth-child(1):nth-child(1) {
+  color: #2b7b60;
+  font-weight: 700;
+}
+.upload-card-etat div p:nth-child(2):nth-child(2),
+.upload-card-etat div p:nth-child(1):nth-child(2) {
+  color: #2b7b60;
+  font-weight: 700;
+}
+.upload-card-wc {
+  flex: 60%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.upload-card-wc__input {
+  height: 50%;
+  width: 18%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #e3f2ed;
+  border-radius: 10px;
+}
+.upload-card-wc__input input[type=file] {
+  display: none;
+}
+.upload-card-wc__input label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 50%;
+  width: 50%;
+  cursor: pointer;
+}
+.upload-card-wc__input label img {
+  height: 40%;
+  width: 40%;
+}
+.upload-card-wc__input label p {
+  margin-top: 20%;
+  font-weight: 400;
+  font-size: 10pt;
+}
+.upload-card-wc__input p {
+  padding: 10%;
+  font-weight: 400;
+  font-size: 8pt;
+}
+.upload-card-btn {
+  flex: 20%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.upload-card-btn button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 30%;
+  width: 10%;
+  border: none;
+  border-radius: 7px;
+  background-color: #002a58;
+  margin-left: 3%;
+  cursor: pointer;
+}
+.upload-card-btn button p {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 14%;
+  font-weight: 700;
+  font-size: 13pt;
+  color: #ffffff;
+}
+.upload-card-btn button p:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../assets/fleches.png");
+  background-repeat: no-repeat;
+  background-position: 70% center;
+  background-size: 12%;
+}
+.upload-card-btn button:hover p:last-child {
+  animation: slide-right 0.2s ease-in-out forwards;
+}
+.upload-card-btn button:disabled {
+  background-color: rgba(0, 43, 88, 0.6);
+}
+.upload-card-btn button:disabled p:last-child {
+  animation: none;
+}/*# sourceMappingURL=loding-card.component.css.map */

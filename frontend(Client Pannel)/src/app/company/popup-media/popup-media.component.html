@@ -1,0 +1,46 @@
+<div class="modal_media" *ngIf="isOpen">
+  <div class="modal-content_media">
+    <div class="modal-content_media__title">
+      <div><p id="title">Add Social Media</p></div>
+    </div>
+    <div class="modal-content_media__options">
+      <form [formGroup]="myform">
+        <div class="input-wrapper">
+          <label for="name">Media </label>
+          <select formControlName="name" id="name" required="">
+            <option *ngFor="let option of socialMediaOptions" [value]="option">
+              {{ option }}
+            </option>
+          </select>
+          <span
+            *ngIf="
+              myform.get('name')?.touched &&
+              myform.get('name').hasError('required')
+            "
+            style="color: red"
+            >this field is required</span
+          >
+        </div>
+        <div class="input-wrapper">
+          <input type="text" formControlName="url" id="url" required />
+          <label for="url">url</label>
+          <span
+            *ngIf="
+              myform.get('url')?.touched &&
+              myform.get('url').hasError('required')
+            "
+            style="color: red"
+            >this field is required
+            <hr />
+          </span>
+        </div>
+      </form>
+    </div>
+    <div class="modal-content_media__buttons">
+      <strong style="cursor: pointer" (click)="back()">Cancel</strong>
+      <button type="button" [disabled]="myform.invalid" (click)="send_Data()">
+        <p>Next</p>
+      </button>
+    </div>
+  </div>
+</div>

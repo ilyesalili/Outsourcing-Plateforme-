@@ -1,0 +1,43 @@
+<article class="account-type">
+  <div class="account-type__logo">
+    <p>excellence</p>
+  </div>
+  <div class="account-type-wc">
+    <div class="account-type-wc__choose">
+      <div class="account-type-wc__choose__title">
+        <p>Choose the type of the</p>
+        <p>account</p>
+      </div>
+      <div class="account-type-wc__choose__checkbox">
+        <div class="account-type-wc__choose__checkbox__item" (click)="onDivClick('worker')">
+          <img src="./../../assets/worker.png" alt="">
+          <label for="worker">Worker</label>
+          <input
+            type="radio"
+            id="worker"
+            name="account-type"
+            value="WORKER"
+            (click)="onDivClick('worker')"
+          />
+        </div>
+        <div class="account-type-wc__choose__checkbox__item" (click)="onDivClick('client')">
+            <img src="./../../assets/Client.png" alt="">
+          <label for="client">Client</label>
+          <input
+            type="radio"
+            id="client"
+            name="account-type"
+            value="COMPANY"
+            (click)="onDivClick('client')"
+          />
+        </div>
+      </div>
+      <div class="account-type-wc__choose__next">
+        <button type="button" [disabled]="!selectionMade" (click)="GoToSignUp(role)">
+            <p>Next</p>
+            <p></p>
+          </button>
+      </div>
+    </div>
+  </div>
+</article>

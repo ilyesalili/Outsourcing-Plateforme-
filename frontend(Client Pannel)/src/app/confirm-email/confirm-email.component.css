@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+}
+
+.reset-pass {
+  background-color: #002a58;
+  height: 98vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.reset-pass__logo {
+  flex: 10%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.reset-pass__logo p {
+  font-size: 16pt;
+  font-weight: 700;
+  color: #ffffff;
+  padding-left: 5%;
+}
+.reset-pass-card {
+  flex: 90%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reset-pass-card__forform {
+  height: 50%;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+.reset-pass-card__forform__title {
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  padding-left: 10%;
+  flex: 30%;
+}
+.reset-pass-card__forform__title p {
+  font-size: 20pt;
+  font-weight: 700;
+  color: #002a58;
+}
+.reset-pass-card__forform__form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  flex: 70%;
+}
+.reset-pass-card__forform__form form {
+  height: 50%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 60%;
+}
+.reset-pass-card__forform__form form .input-wrapper {
+  height: 15%;
+  width: 100%;
+  position: relative;
+  flex: 30%;
+}
+.reset-pass-card__forform__form form .input-wrapper__para {
+  margin-top: 2%;
+  font-size: 10pt;
+}
+.reset-pass-card__forform__form form .input-wrapper input {
+  border: none;
+  border-bottom: 2px solid #ddd;
+  height: 75%;
+  width: 50%;
+  font-size: 12pt;
+  margin: 2%;
+  text-align: center;
+}
+.reset-pass-card__forform__form form .input-wrapper input:focus {
+  outline: none;
+}
+.reset-pass-card__forform__form form .input-wrapper input:focus + label {
+  transform: translateY(-15px);
+  font-size: 10pt;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reset-pass-card__forform__form form .input-wrapper input:valid + .form-label {
+  top: -1rem;
+  font-size: 0.8rem;
+}
+.reset-pass-card__forform__form form .input-wrapper label {
+  font-size: 10pt;
+  position: absolute;
+  top: 3%;
+  left: 0%;
+  transition: all 0.2s ease-in-out;
+  color: #999;
+}
+.reset-pass-card__forform__form form .input-wrapper span {
+  font-size: 8pt;
+  margin-top: 2%;
+  display: flex;
+  justify-content: end;
+}
+.reset-pass-card__forform__form form .input-wrapper:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.reset-pass-card__forform__form form .create {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 40%;
+  display: flex;
+}
+.reset-pass-card__forform__form form .create button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 70%;
+  width: 40%;
+  margin-bottom: 7%;
+  border: none;
+  border-radius: 7px;
+  background-color: #002a58;
+  cursor: pointer;
+}
+.reset-pass-card__forform__form form .create button p {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 13pt;
+  color: #ffffff;
+}
+.reset-pass-card__forform__form form .create button:disabled {
+  background-color: rgba(0, 43, 88, 0.6);
+}
+.reset-pass-card__forform__form form .create button:disabled p:last-child {
+  animation: none;
+}/*# sourceMappingURL=confirm-email.component.css.map */

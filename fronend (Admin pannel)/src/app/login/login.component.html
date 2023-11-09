@@ -1,0 +1,66 @@
+<article class="login">
+    <div class="login__logo">
+      <p>excellence</p>
+    </div>
+    <div class="login-card">
+      <div class="login-card__forform">
+        <div class="login-card__forform__title">
+          <p>Log In</p>
+        </div>
+        <div class="login-card__forform__form">
+          <form [formGroup]="form" (ngSubmit)="signIn()">
+            <div class="input-wrapper">
+              <input type="text" formControlName="email" id="email" required />
+              <label for="email">Emial</label>
+              <span
+                *ngIf="
+                  form.get('email').touched &&
+                  form.get('email').hasError('required')
+                "
+                style="color: red"
+                >this field is required 
+                <hr>
+              </span>
+              <span
+                *ngIf="
+                  form.get('email').touched && form.get('email').hasError('email')"
+                style="color: red">
+                Invalid email format
+              </span>
+            </div>
+  
+  
+            <div class="input-wrapper">
+              <input [type]="show ? 'text' : 'password'" formControlName="password" id="password" /> 
+              
+              <label for="password">PassWord</label>
+              <span
+                *ngIf="
+                  form.get('password').touched &&
+                  form.get('password').hasError('required')
+                "
+                style="color: red"
+                >this field is required <br
+              /></span>
+          
+              <span class="span_show" (click)="toggleShow()">{{show ? 'Hide' : 'Show'}}</span>
+            
+            </div>
+           
+            <div class="input-wrapper">
+             <p class="input-wrapper__para">You forgot your Password? &nbsp;&nbsp;<strong style="color: green;cursor: pointer;" (click)="GoToReset()">Reset</strong></p>
+            </div>
+            <div class="create">
+              <button type="submit" [disabled]="form.invalid" >
+                  <p>Connect</p>
+              </button>
+              <div class="create__signin">
+                <p class="create__signin__para"> You don't have an account?&nbsp;&nbsp;<strong style="color: green;cursor: pointer;" (click)="GoToSignUp()">Sign Up</strong></p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </article>
+  

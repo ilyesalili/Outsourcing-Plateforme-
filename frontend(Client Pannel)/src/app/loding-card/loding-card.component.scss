@@ -1,0 +1,144 @@
+@import "./../mixins";
+@import "./../variables";
+
+@keyframes slide-right {
+  from {
+      background-position:70% center;
+  }
+  to {
+      background-position:80% center;
+  }
+}
+
+
+.upload-card {
+  background-color: $bg-white-color;
+  @include boxsize(98vh, 100%);
+  @include flex(center);
+  @include flex-directions(column);
+
+  &__logo {
+    flex: 10%;
+    @include boxsize(100%, 100%);
+    display: flex;
+    align-items: center;
+    p {
+      @include font-size(titre_nav);
+      @include font-weight(bold);
+      color: $secondary-color;
+      padding-left: 5%;
+    }
+  }
+  &-etat {
+    @include boxsize(100%, 100%);
+    @include flex(center);
+    @include flex-directions(column);
+    flex: 10%;
+    img {
+      @include boxsize(50%, 70%);
+    }
+    div {
+      margin-top: 2%;
+      @include boxsize(50%, 70%);
+      @include flex-directions(row);
+      display: flex;
+      justify-content: space-between;
+      p {
+        @include font-size(text0);
+      }
+
+      p:nth-child(2),
+      p:nth-child(1) {
+        padding-left: 3%;
+
+        &:nth-child(1) {
+          color: $praimary-color;
+          @include font-weight(bold);
+        }
+        &:nth-child(2) {
+          color: $praimary-color;
+          @include font-weight(bold);
+        }
+      }
+    }
+  }
+  &-wc {
+    flex: 60%;
+    @include boxsize(100%, 100%);
+    @include flex(center);
+    &__input {
+      @include boxsize(50%, 18%);
+      @include flex(center);
+      @include flex-directions(column);
+      background-color: $input-color;
+      border-radius: 10px;
+     
+
+      input[type="file"] {
+        display: none;
+      }
+      label{
+        @include flex-directions(column);
+        @include boxsize(50%,50%);
+        cursor: pointer;
+
+        img{
+          @include boxsize(40%,40%)
+        }
+        p{
+          margin-top: 20%;
+          @include font-weight(regular);
+          @include font-size(for_forms);
+        }
+      }
+      p {
+        padding: 10%;
+        @include font-weight(regular);
+        @include font-size(required);
+      }
+    }
+  }
+  &-btn {
+    flex: 20%;
+    @include boxsize(100%,100%);
+    @include flex(center);
+
+    button{
+      @include flex-directions(row);
+      @include boxsize(30%,10%);
+      border: none;
+      border-radius: 7px;
+      background-color: $secondary-color;
+      margin-left: 3%;
+      cursor: pointer;
+
+      p{
+          @include boxsize(100%,100%);
+          @include flex(left);
+          padding-left: 14%;
+          @include font-weight(bold);
+          @include font-size(text1);
+          color: $bg-white-color;
+      }
+      p:last-child{
+          @include flex(center);
+          background-image: url("../../assets/fleches.png");
+          background-repeat: no-repeat;
+          background-position:70% center;
+          background-size: 12%;
+      }
+      
+      &:hover{
+          p:last-child{
+              animation: slide-right 0.2s ease-in-out forwards;
+          }
+      }
+      &:disabled{
+          background-color:  #002b5899;
+          p:last-child{
+              animation:none;
+          }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@import '../../Variables/mixins';
+@import '../../Variables/variables';
+.main{
+    @include boxsize(100vh,100%);
+    @include flex-directions(row);
+    &__navbar{
+        flex: 20%;
+        background-color: $secondary-color;
+        @include boxsize(100%,100%);
+    }
+    &__content{
+        flex: 80%;
+        @include flex(center);
+        @include boxsize(100%,100%);
+        @include flex-directions(column);
+       &__nav{
+        flex: 10%;
+        @include flex-directions(row);
+        @include boxsize(100%,100%);
+        p{
+            flex: 20%;
+            @include boxsize(100%,100%);
+            @include flex(center);
+            @include font-size(text2);
+            @include font-weight(bold);
+        }
+        &__notif{
+            flex:80% ;
+            @include boxsize(100%,100%);
+            @include flex(end);
+            padding-right: 10%;
+        }
+
+
+       }
+       &__componant{
+        flex: 90%;
+        @include flex(center);
+        @include boxsize(100%,100%);
+        background-color: $popup-color;
+        // background-color: rgba(255, 0, 0, 0.406);
+       }
+    }
+}

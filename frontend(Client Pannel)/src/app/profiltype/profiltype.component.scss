@@ -1,0 +1,140 @@
+@import "./../mixins";
+@import "./../variables";
+
+@keyframes slide-right {
+    from {
+        background-position:70% center;
+    }
+    to {
+        background-position:80% center;
+    }
+  }
+
+.account-type {
+  background-color: $secondary-color;
+  @include boxsize(98vh, 100%);
+  @include flex(center);
+  @include flex-directions(column);
+
+  &__logo {
+    flex: 10%;
+    @include boxsize(100%, 100%);
+    display: flex;
+    align-items: center;
+    p {
+      @include font-size(titre_nav);
+      @include font-weight(bold);
+      color: $bg-white-color;
+      padding-left: 5%;
+    }
+  }
+  &-wc {
+    flex: 90%;
+    @include boxsize(100%,100%);
+    display: flex;
+    justify-content: center;
+    padding-top: 2%;
+
+    &__choose{
+        @include boxsize(80%,55%);
+        @include flex(center);
+        @include flex-directions(column);
+        background-color: $bg-white-color;
+        border-radius:10px ;
+
+        &__title{
+            @include boxsize(100%,100%);
+            @include flex-directions(column);
+            display: flex;
+            justify-content:end;
+            align-items:center;
+            flex: 20%;
+
+            p{
+                @include font-size(title);
+                @include font-weight(bold);
+                color: $secondary-color;
+            }
+        }
+        &__checkbox{
+            @include boxsize(100%,100%);
+            @include flex(center);
+            @include flex-directions(row);
+            cursor: pointer;
+            column-gap:10% ;
+            flex: 65;
+
+            &__item{
+                @include boxsize(60%,30%);
+                @include flex-directions(column);
+                @include flex(center);
+
+                // background-color: red;
+                border-radius: 15px;
+
+                img{
+                    margin-top: 15%;
+                    @include boxsize(20%,20%);
+                }
+                label{
+                    @include flex(center);
+                    @include boxsize(100%,100%);
+                    @include font-size(titre_nav)
+                }
+                input{
+                    margin-bottom: 10%;
+                    @include boxsize(35%,35%);
+                }
+                
+                &:hover{
+                    background-color: #2b7b605e;
+                }
+            }
+            
+        }
+        &__next{
+            @include boxsize(100%,100%);
+            display: flex;
+            justify-content: center;
+            flex: 15%;
+            button{
+                @include flex-directions(row);
+                @include boxsize(50%,20%);
+                border: none;
+                border-radius: 7px;
+                background-color: $secondary-color;
+                cursor: pointer;
+
+                p{
+                    @include boxsize(100%,100%);
+                    @include flex(left);
+                    padding-left: 14%;
+                    @include font-weight(bold);
+                    @include font-size(text1);
+                    color: $bg-white-color;
+                }
+                p:last-child{
+                    @include flex(center);
+                    background-image: url("../../assets/fleches.png");
+                    background-repeat: no-repeat;
+                    background-position:70% center;
+                    background-size: 12%;
+                }
+                
+                &:hover{
+                    p:last-child{
+                        animation: slide-right 0.2s ease-in-out forwards;
+                    }
+                }
+                &:disabled{
+                    background-color:  #002b5899;
+                    p:last-child{
+                        animation:none;
+                    }
+                }
+                
+            }
+        }
+    }
+  }
+}

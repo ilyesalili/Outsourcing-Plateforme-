@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(112, 112, 112, 0.3215686275);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  height: 70%;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.modal-content__title {
+  position: relative;
+  flex: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.modal-content__title div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.modal-content__title div p {
+  position: relative;
+  left: 10%;
+  font-size: 10pt;
+}
+.modal-content__title div #title {
+  font-size: 14pt;
+  font-weight: 500;
+}
+.modal-content__title div:nth-child(1) {
+  padding-top: 5%;
+  flex: 60%;
+}
+.modal-content__title div:nth-child(2) {
+  flex: 40%;
+}
+.modal-content__options {
+  flex: 50%;
+  height: 100%;
+  width: 75%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1.5px solid #ddd;
+  border-bottom: 1.5px solid #ddd;
+  padding-top: 5%;
+}
+.modal-content__options div {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.modal-content__options div p {
+  font-weight: 500;
+  font-size: 13pt;
+}
+.modal-content__buttons {
+  flex: 20%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+  justify-content: end;
+}
+.modal-content__buttons button {
+  height: 30%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 7px;
+  background-color: #002a58;
+  margin-left: 3%;
+  margin-right: 3%;
+  cursor: pointer;
+}
+.modal-content__buttons button p {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 12pt;
+  color: #ffffff;
+}
+.modal-content__buttons button:disabled {
+  background-color: rgba(0, 43, 88, 0.6);
+}/*# sourceMappingURL=popup-skills.component.css.map */

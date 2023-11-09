@@ -1,0 +1,100 @@
+@import "./../../mixins";
+@import "./../../variables";
+
+.home-company__workers__filter {
+  flex: 30%;
+  @include flex(center);
+  position: relative;
+  top: 0;
+  min-height: 80vh;
+  border: $border-btn;
+  border-radius: $border-redius;
+  @include flex-directions(column);
+  background-color: $background-table;
+
+  &__title {
+    @include boxsize(100%, 100%);
+    flex: 1;
+    @include flex(center);
+    @include flex-directions(row);
+    justify-content: space-between;
+
+    p {
+      margin-left: 7%;
+      @include font-size(text2);
+      @include font-weight(bold);
+    }
+    button {
+      margin-right: 10%;
+      padding: 3%;
+      @include boxsize(50%, 30%);
+      background-color: $praimary-color;
+      border: none;
+      border-radius: $border-redius;
+      color: $bg-white-color;
+      @include font-size(text1_2);
+      cursor: pointer;
+
+      &:hover {
+        background-color: $hover-primary;
+      }
+    }
+  }
+  &__filters {
+    @include boxsize(100%, 100%);
+    flex: 9;
+
+    &__container {
+      position: relative;
+      width: 100%;
+      transition: width 0.3s ease;
+
+      .toggle-button {
+        background-color: #e0e0e0;
+        padding: 10px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      .dropdown-content {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        background-color: #f8f8f8;
+        transition: max-height 0.3s ease;
+        form {
+          display: flex;
+          flex-direction: column;
+          label {
+            margin-bottom: 5px;
+          }
+
+          .filter-list {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            .filter-item {
+              display: flex;
+              align-items: center;
+              gap: 5px;
+            }
+          }
+        }
+      }
+
+      &.open {
+        width: 100%; /* Expanded width */
+        .dropdown-content {
+          max-height: 200px;
+          overflow-y: scroll; /* Expanded height */
+        }
+      }
+    }
+  }
+}

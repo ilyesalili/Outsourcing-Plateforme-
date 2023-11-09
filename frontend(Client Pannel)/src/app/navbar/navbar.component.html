@@ -1,0 +1,45 @@
+<nav class="nav"  *ngIf="menuTest==false">
+  <div class="nav-logo"><p routerLink="/" style="cursor: pointer;"> excellence</p></div>
+  <div class="nav-ul">
+    <ul class="nav-menu">
+      <li class="nav-menu__item"><a routerLink="/home"  class="nav-menu__link"> Browse</a></li>
+      <li class="nav-menu__item"><a  routerLink="/signup/WORKER"  class="nav-menu__link">Become a Worker</a> </li>
+      <li class="nav-menu__item"><a routerLink="/login" class="nav-menu__link" > Log in</a></li>
+      <li class="nav-menu__item"><a routerLink="/join" class="nav-menu__link" >Join</a> </li>
+    </ul>
+  </div>
+</nav>
+<nav class="nav__login" *ngIf="menuTest">
+  <div class="nav-logo"><p routerLink="/" style="cursor: pointer;"> excellence</p></div>
+  <div class="nav-ul">
+    <ul class="nav-menu">
+      <div>
+        <li class="nav-menu__item">
+          <a routerLink="/home" class="nav-menu__link"> Browse</a>
+        </li>
+        <li class="nav-menu__item">
+          <div class="dropdown">
+            <button class="dropbtn">Hiring <i class="fas fa-chevron-down"></i></button>
+            <div class="dropdown-content">
+            <a routerLink="/company/request">Requests</a>
+            <a href="#">My Jobs</a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-menu__item" >
+          <a routerLink="/login" class="nav-menu__link"> Conversation</a>
+        </li>
+      </div>
+      <li class="nav-menu__item"  id="account">
+        <div class="dropdown">
+          <button class="dropbtn"><i class="fad fa-user-circle" ></i><i class="fas fa-chevron-down"></i></button>
+          <div class="dropdown-content">
+          <a href="#">Profil</a>
+          <a routerLink="/company/panier">Card</a>
+          <a (click)="logOut()">LogOut</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>

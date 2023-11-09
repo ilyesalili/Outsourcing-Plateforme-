@@ -1,0 +1,27 @@
+@import "../../mixins";
+@import "../../variables";
+.user{
+    @include boxsize(5vh,10vw);
+    @include flex-directions(row);
+
+    
+}
+.avatar{
+    background-image: url("../../../assets/profil.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    flex: 30%;
+    @include boxsize(100%,100%)
+}
+.info{
+    float: 70%;
+    @include boxsize(100%,100%);
+    display: flex;
+    align-items: center;
+
+    p{
+        margin-top: 10%;
+    }
+
+}

@@ -1,0 +1,9 @@
+<article class="container">
+    <nav><app-navbar></app-navbar></nav>
+    <div class="container__main">
+        <ng-container *ngFor="let i of array">
+            <app-card-request [data]="i"></app-card-request>
+        </ng-container>
+ 
+    </div>
+</article>

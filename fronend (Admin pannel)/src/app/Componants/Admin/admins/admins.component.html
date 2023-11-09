@@ -1,0 +1,68 @@
+
+<div class="conatiner" >
+    <div class="conatiner__nav">
+      <div class="conatiner__nav__title" [@scrollFromRight]>
+         <p >{{"Admins"|translate}}</p>
+      </div>
+      <div class="conatiner__nav__search" [@scrollFromRight]>
+          <input type="text" [(ngModel)]="searchText" (input)="filterElements()" placeholder="Search"/>
+      </div>
+      <div class="conatiner__nav__add" [@scrollFromRight]>
+          <button>{{"add"|translate}} +</button>
+      </div>
+  
+    </div>
+    <div class="conatiner__table">
+      <div class="table-container" *ngIf="dataLoaded" [@scrollFromRight]>
+        <mat-table #table [dataSource]="dataSource">
+          <!-- Position Column -->
+          <ng-container matColumnDef="position">
+            <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+            <mat-cell *matCellDef="let element; let i = index">
+              {{ i + 1 }}
+            </mat-cell>
+          </ng-container>
+  
+          
+          <!-- Email Column -->
+          <ng-container matColumnDef="email">
+            <mat-header-cell *matHeaderCellDef> Email </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{ element.email }} </mat-cell>
+          </ng-container>
+          <!-- createdAt Column -->
+          <ng-container matColumnDef="createdAt">
+            <mat-header-cell *matHeaderCellDef> CreatedAt </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{ element.signUpDate }} </mat-cell>
+          </ng-container>
+          
+  
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="symbol">
+            <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
+            <mat-cell *matCellDef="let element">
+              <button mat-icon-button color="primary" (click)="editItem(element)">
+                  <!-- <mat-icon>edit</mat-icon> -->
+                  <i class="fal fa-user-edit"></i>
+              </button>
+              <button mat-icon-button color="warn" (click)="deleteRow(element)">
+                  <!-- <mat-icon>delete</mat-icon> -->
+                  <i class="fal fa-trash-alt"></i>
+              </button>
+              <button mat-icon-button color="accent" (click)="blockItem(element)">
+                  <!-- <mat-icon>block</mat-icon>
+                 -->
+                 <i class="fal fa-user-slash"></i>
+              </button>
+            </mat-cell>
+          </ng-container>
+  
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+        </mat-table>
+  
+        <mat-paginator #paginator [pageSize]="10" [showFirstLastButtons]="true">
+        </mat-paginator>
+      </div>
+    </div>
+  </div>
+  

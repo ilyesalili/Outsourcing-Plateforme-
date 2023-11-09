@@ -1,0 +1,42 @@
+<article class="reset-pass">
+    <div class="reset-pass__logo">
+      <p>excellence</p>
+    </div>
+    <div class="reset-pass-card">
+      <div class="reset-pass-card__forform">
+        <div class="reset-pass-card__forform__title">
+          <p>Reset Password</p>
+        </div>
+        <div class="reset-pass-card__forform__form">
+          <form [formGroup]="form" (ngSubmit)="send_data()">
+            <div class="input-wrapper">
+                <p class="input-wrapper__para">an Email has been sent to you , it contains a 6-digit number </p>
+            </div>
+            <div class="input-wrapper" formControlName="code" >
+                <label for="phone">Confirmation Code</label>
+                <input type="text" id="code1" formControlName="code1" required maxlength="1" pattern="[0-9]{1}">
+                <span>&nbsp;</span>
+                <input type="text" id="code2" formControlName="code2" required maxlength="1" pattern="[0-9]{1}">
+                <span>&nbsp;</span>
+                <input type="text" id="code3" formControlName="code3" required maxlength="1" pattern="[0-9]{1}">
+                <span>&nbsp;</span>
+                <input type="text" id="code4" formControlName="code4" required maxlength="1" pattern="[0-9]{1}">
+                <span>&nbsp;</span>
+                <input type="text" id="code5" formControlName="code5" required maxlength="1" pattern="[0-9]{1}">
+                <span>&nbsp;</span>
+                <input type="text" id="code6" formControlName="code6" required maxlength="1" pattern="[0-9]{1}">
+            </div>
+            <div class="input-wrapper">
+                <p class="input-wrapper__para">Didn't receive a code? <strong style="color: green;cursor: pointer;" (click)="GoToNewPassword()">Resend</strong></p>
+            </div>
+            <div class="create">
+              <button type="button" [disabled]="form.invalid" (click)="GoToNewPassword()">
+                <p>Confirm Email</p>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </article>
+  

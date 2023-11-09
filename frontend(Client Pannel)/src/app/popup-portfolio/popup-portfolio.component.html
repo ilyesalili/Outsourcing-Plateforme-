@@ -1,0 +1,158 @@
+<div class="modal_portfolio" *ngIf="isOpen">
+    <div class="modal-content_portfolio">
+      <div class="modal-content_portfolio__title">
+        <div><p id="title">Add Project</p></div>
+      </div>
+      <div class="modal-content_portfolio__options">
+        <form [formGroup]="myform">
+          <div class="input-wrapper">
+            <input type="text" formControlName="title" id="title" required />
+            <label for="title">title </label>
+            <span
+              *ngIf="
+                myform.get('title')?.touched &&
+                myform.get('title').hasError('required')
+              "
+              style="color: red"
+              >this field is required</span
+            >
+          </div>
+          <div class="input-wrapper">
+            <input type="text" formControlName="role" id="role" required />
+            <label for="role">role</label>
+            <span
+              *ngIf="
+                myform.get('role')?.touched &&
+                myform.get('role').hasError('required')
+              "
+              style="color: red"
+              >this field is required
+              <hr />
+            </span>
+          </div>
+          <div class="input-wrapper">
+            <div class="title">
+              <div class="title__p">
+                <p>Skills</p>
+              </div>
+              <div class="title__btn">
+                <button (click)="isModalOpenskill = true"><i class="fas fa-plus"></i></button>
+                <app-popup-skills
+                [isOpen]="isModalOpenskill"
+                (close)="isModalOpenskill = false"
+                [skillsSelected]="parentSkills"
+                (skillsChange)="handleSkillsChange($event)"
+              ></app-popup-skills>
+              </div>
+            </div>
+            <div class="input-wrapper-skills">
+              <div
+                class="skill"
+                *ngFor="let item of parentSkills.slice(0, 3)"
+              >
+                <p>{{ item.name }}</p>
+              </div>
+              <p id="reste" *ngIf="parentSkills.length > 3">
+                +{{ parentSkills.length - 3 }}
+              </p>
+            </div>
+          </div>
+          <div class="input-wrapper">
+            <div>
+              <p for="project_goal">Project Goal</p>
+            </div>
+            <div>
+              <textarea
+                type="text"
+                formControlName="project_goal"
+                id="project_goal"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+  
+            <span
+              *ngIf="
+                myform.get('project_goal')?.touched &&
+                myform.get('project_goal').hasError('required')
+              "
+              style="color: red"
+              >this field is required
+              <hr />
+            </span>
+          </div>
+          <div class="input-wrapper">
+            <div>
+              <p for="project_solution">Project Solution</p>
+            </div>
+            <div>
+              <textarea
+                type="text"
+                formControlName="project_solution"
+                id="project_solution"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+  
+            <span
+              *ngIf="
+                myform.get('project_solution')?.touched &&
+                myform.get('project_solution').hasError('required')
+              "
+              style="color: red"
+              >this field is required
+              <hr />
+            </span>
+          </div>
+          <div class="input-wrapper">
+            <div class="input-wrapper__input">
+                <label for="file_upload">
+                  <img src="./../../assets/upload.png" alt="upload" id="img_file" />
+                  <p id="name_file">Upload Your File</p>   
+                </label>
+                <input
+                  id="file_upload"
+                  type="file"
+                  accept="application/pdf"
+                  #fileInput
+                  (change)="onFileSelected($event)"
+                />
+              </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-content_portfolio__buttons">
+        <strong style="cursor: pointer" (click)="back()">Cancel</strong>
+        <button type="button" [disabled]="myform.invalid" (click)="send_Data()">
+          <p>Next</p>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="modal" *ngIf="isModalOpenskill">
+    <div class="modal-content">
+      <div class="modal-content__title">
+        <div><p id="title">Add Skills</p></div>
+        <div><p>Add skills from the list :</p></div>
+      </div>
+      <div class="modal-content__options">
+        <div *ngFor="let option of options2">
+          <input
+            type="checkbox"
+            [checked]="isSelected_skill(option)"
+            (change)="toggleOptionSelection_skill(option)"
+          />
+          <p>{{ option }}</p>
+        </div>
+      </div>
+      <div class="modal-content__buttons">
+        <strong (click)="deleteSelect_skill()">Clear </strong>
+        <button type="button" (click)="SaveSkills_skill()">
+          <p>Next</p>
+        </button>
+      </div>
+    </div>
+  </div> -->
+  

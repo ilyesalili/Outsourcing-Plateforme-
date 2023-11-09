@@ -1,0 +1,13 @@
+<div class="main" style="background-color: red;">
+  <app-nav-bar class="main__navbar"></app-nav-bar>
+  <div class="main__content">
+    <div class="main__content__nav">
+      <p [@scrollFromRight]>{{title|translate}}</p>
+      <div class="main__content__nav__notif">
+        <i class="fas fa-user-circle"></i>
+      </div>
+    </div>
+      <app-dashboard class="main__content__componant" *ngIf="(activePage | async) === 'Dashborad'"></app-dashboard>
+      <app-workers class="main__content__componant" *ngIf="(activePage | async) === 'Workes'"></app-workers>
+  </div>
+</div>

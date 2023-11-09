@@ -1,0 +1,254 @@
+@import "./../mixins";
+@import "./../variables";
+
+@keyframes slide-right {
+  from {
+    background-position: 70% center;
+  }
+  to {
+    background-position: 80% center;
+  }
+}
+
+.personal-info {
+  background-color: $bg-white-color;
+  @include boxsize(98vh, 100%);
+  @include flex(center);
+  @include flex-directions(column);
+
+  &__logo {
+    flex: 10%;
+    @include boxsize(100%, 100%);
+    display: flex;
+    align-items: center;
+    p {
+      @include font-size(titre_nav);
+      @include font-weight(bold);
+      color: $secondary-color;
+      padding-left: 5%;
+    }
+  }
+  &-etat {
+    @include boxsize(100%, 100%);
+    @include flex(center);
+    @include flex-directions(column);
+    flex: 10%;
+    img {
+      @include boxsize(50%, 70%);
+    }
+    div {
+      margin-top: 2%;
+      @include boxsize(50%, 70%);
+      @include flex-directions(row);
+      display: flex;
+      justify-content: space-between;
+      p {
+        @include font-size(text0);
+      }
+
+      p:nth-child(2),
+      p:nth-child(1) {
+        padding-left: 5%;
+
+        &:nth-child(1) {
+          color: $praimary-color;
+          @include font-weight(bold);
+        }
+        &:nth-child(2) {
+          color: $praimary-color;
+          @include font-weight(bold);
+        }
+      }
+    }
+  }
+  &-wc {
+    flex: 60%;
+    @include boxsize(100%, 100%);
+    @include flex(center);
+
+    form {
+      @include boxsize(95%, 65%);
+      @include flex-directions(column);
+      @include flex-directions(row);
+      border: 0.5px solid #3333334f;
+      border-radius: $border-redius;
+      .info {
+        flex: 60%;
+        @include boxsize(80%,100%);
+        @include flex(center);
+        @include flex-directions(column);
+        padding-left: 3%;
+        padding-right: 10%;
+
+        .input-wrapper {
+          @include boxsize(15%, 100%);
+          flex: 25%;
+          position: relative;
+          margin-bottom: 6%;
+
+          &__para {
+            margin-top: 1%;
+            @include font-size(for_forms);
+          }
+
+          input {
+            border: none;
+            border-bottom: 1.5px solid #ddd;
+            @include boxsize(100%, 100%);
+            @include font-size(for_forms);
+            padding-top: 2%;
+
+            &:focus {
+              outline: none;
+            }
+            &:focus + label {
+              transform: translateY(-15px);
+              @include font-size(for_forms);
+              color: #333;
+              @include flex(center);
+            }
+            &:valid {
+              + .form-label {
+                top: -1rem;
+                font-size: 0.8rem;
+              }
+            }
+          }
+
+          label {
+            @include font-size(for_forms);
+            position: absolute;
+            top: 1%;
+            left: 0%;
+            transition: all 0.2s ease-in-out;
+            color: #999;
+          }
+          span {
+            @include font-size(required);
+            margin-top: 1%;
+            display: flex;
+            justify-content: end;
+          }
+         &:nth-child(3) {
+            @include flex-directions(row);
+            .chose_country{
+              flex: 40%;
+              select{
+                border: none;
+                width:80%;
+                padding-bottom: 1.5%;
+                border-bottom: 1.5px solid #ddd;
+              }
+              span{
+                margin-right: 20%;
+              }
+            }
+            .phone{
+              flex: 60%;
+              input{
+                margin-top: 1%;
+              }
+              label{
+                left: 40%;
+              }
+            }
+
+          }
+          &:nth-child(5){
+            @include boxsize(90%,100%);
+            margin-top: 2%;
+            @include flex(center);
+            @include flex-directions(row);
+            div{
+              @include boxsize(100%,100%);
+              padding-right: 10%;
+              &:nth-child(1){
+                @include flex-directions(column);
+               
+                span {
+                  margin-left: 35%;
+                }
+              }
+            }
+          }
+         
+        }
+      }
+      .image{
+        height:100%;
+        @include flex(center);
+        @include flex(center);
+        flex: 40%;
+        div{
+            @include boxsize(70%,70%);
+            @include flex(center);
+            border: 0.5px solid #3333334f;
+            border-radius: $border-redius;
+
+            input[type="file"] {
+                display: none;
+              }
+              label{
+                @include flex-directions(column);
+                @include boxsize(80%,80%);
+                cursor: pointer;
+        
+                img{
+                  @include boxsize(90%,90%);
+                  border: 0.5px solid #3333334f;
+                  border-radius: 50%;
+                }
+                p{
+                  margin-top: 10%;
+                  @include font-weight(regular);
+                  @include font-size(text0)
+                }
+              }
+        }
+      }
+    }
+  }
+  &-btn {
+    flex: 20%;
+    @include boxsize(100%, 100%);
+    @include flex(center);
+
+    button {
+      @include flex-directions(row);
+      @include boxsize(35%, 15%);
+      border: none;
+      border-radius: 7px;
+      background-color: $secondary-color;
+      margin-left: 3%;
+      cursor: pointer;
+
+      p {
+        @include boxsize(100%, 100%);
+        @include flex(left);
+        padding-left: 14%;
+        @include font-weight(bold);
+        @include font-size(text1);
+        color: $bg-white-color;
+      }
+      p:last-child {
+        @include flex(center);
+        background-image: url("../../assets/fleches.png");
+        background-repeat: no-repeat;
+        background-position: 70% center;
+        background-size: 12%;
+      }
+
+      &:hover {
+        p:last-child {
+          animation: slide-right 0.2s ease-in-out forwards;
+        }
+      }
+      &:disabled {
+        background-color: #002b5899;
+        p:last-child {
+          animation: none;
+        }
+      }
+    }
+  }
+}

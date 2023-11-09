@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+}
+
+.cart {
+  height: 15vh;
+  width: 60vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 2%;
+  padding-left: 5%;
+  border-bottom: 1.5px solid #ddd;
+}
+.cart__info {
+  flex: 85%;
+  height: 100%;
+  width: 100%;
+  display: block;
+  align-items: center;
+}
+.cart__info .role {
+  font-size: 14pt;
+  font-weight: 700;
+  padding-top: 5%;
+}
+.cart__info .date {
+  font-size: 12pt;
+  font-weight: 400;
+  color: rgba(112, 112, 112, 0.3215686275);
+  padding-top: 5%;
+}
+.cart__info .description {
+  font-size: 12pt;
+  font-weight: 400;
+  padding-top: 5%;
+}
+.cart__actions {
+  flex: 15%;
+  height: 70%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+  justify-content: end;
+}
+.cart__actions button {
+  height: 50%;
+  width: 3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5%;
+  border-radius: 50%;
+  border: 1.7px solid #ddd;
+  background-color: #ffffff;
+  cursor: pointer;
+  background-position: center;
+  background-image: url("../../../assets/plus.png");
+  background-repeat: no-repeat;
+  background-size: 30%;
+}/*# sourceMappingURL=certaficat-cart.component.css.map */

@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+}
+
+.worker-card {
+  margin-top: 2%;
+  flex: auto;
+  height: 26vh;
+  width: 99%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  border: 1.5px solid #ddd;
+  cursor: pointer;
+}
+.worker-card__information {
+  flex: 50%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1%;
+}
+.worker-card__information__picandname {
+  flex: 70%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.worker-card__information__picandname__pic {
+  flex: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.worker-card__information__picandname__pic img {
+  padding-top: 5%;
+  height: 80%;
+  width: 45%;
+  border-radius: 50%;
+}
+.worker-card__information__picandname__info {
+  flex: 70%;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+}
+.worker-card__information__picandname__info p {
+  height: 100%;
+  width: 100%;
+  margin-top: 3%;
+}
+.worker-card__information__picandname__info #category {
+  font-size: 20pt;
+  font-weight: 500;
+}
+.worker-card__information__add {
+  flex: 30%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: flex-end;
+}
+.worker-card__information__add__fav_btn {
+  flex: 40%;
+  height: 40%;
+  width: 10%;
+  border: none;
+  border-radius: 50%;
+  margin-right: 30%;
+}
+.worker-card__information__add__cart_btn {
+  padding-top: 100%;
+  flex: 60%;
+  height: 40%;
+  width: 60%;
+  border: none;
+  background-color: #2b7b60;
+  padding: 0.8%;
+  color: #ffffff;
+  margin-right: 20%;
+  margin-left: 25%;
+  border-radius: 10px;
+  font-size: 13pt;
+  cursor: pointer;
+}
+.worker-card__description {
+  flex: 25%;
+  height: 100%;
+  width: 100%;
+  padding-top: 1%;
+  padding-left: 8%;
+  padding-right: 10%;
+}
+.worker-card__skills {
+  flex: 25%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+  margin-bottom: 1%;
+}
+.worker-card__skills ul {
+  list-style: none;
+  height: 100%;
+  width: 70%;
+  padding-left: 8%;
+}
+.worker-card__skills ul li {
+  border-radius: 10px;
+  padding: 1%;
+  border: 1.7px solid #ddd;
+  background-color: rgba(218, 236, 220, 0.4352941176);
+  display: inline;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.worker-card:hover {
+  background-color: rgba(112, 112, 112, 0.1058823529);
+}/*# sourceMappingURL=worker-hire.component.css.map */

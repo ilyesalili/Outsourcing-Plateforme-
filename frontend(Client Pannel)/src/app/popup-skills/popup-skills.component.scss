@@ -1,0 +1,96 @@
+@import "./../mixins";
+@import "./../variables";
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $popup-color;
+  @include flex(center);
+  z-index: 1000;
+}
+
+.modal-content {
+    background-color: $bg-white-color;
+    @include boxsize(70%, 40%);
+    @include flex-directions(column);
+    @include flex(center);
+    border-radius: $border-redius;
+  
+    &__title {
+      position: relative;
+      flex: 30%;
+  
+      @include flex-directions(column);
+      @include boxsize(100%, 100%);
+      div {
+        @include boxsize(100%, 100%);
+        display: flex;
+        align-items: center;
+  
+        p {
+          position: relative;
+          left: 10%;
+          @include font-size(for_forms);
+        }
+        #title {
+          @include font-size(text1_2);
+          @include font-weight(meduim);
+        }
+        &:nth-child(1) {
+          padding-top: 5%;
+          flex: 60%;
+        }
+        &:nth-child(2) {
+          flex: 40%;
+        }
+      }
+    }
+    &__options {
+      flex: 50%;
+      @include boxsize(100%, 75%);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: $border-bott;
+      border-bottom: $border-bott;
+      padding-top: 5%;
+      div {
+        @include boxsize(30%, 100%);
+        @include flex-directions(row);
+        p {
+          @include font-weight(meduim);
+          @include font-size(text1);
+        }
+      }
+    }
+    &__buttons {
+      flex: 20%;
+      @include boxsize(100%, 100%);
+      @include flex-directions(row);
+      display: flex;
+      justify-content: end;
+      button {
+        @include boxsize(30%, 20%);
+        @include flex(center);
+        border: none;
+        border-radius: 7px;
+        background-color: $secondary-color;
+        margin-left: 3%;
+        margin-right: 3%;
+        cursor: pointer;
+        p {
+          @include boxsize(100%, 100%);
+          @include flex(center);
+          @include font-weight(bold);
+          @include font-size(text0);
+          color: $bg-white-color;
+        }
+        &:disabled {
+          background-color: #002b5899;
+        }
+      }
+    }
+  }
+  
+  

@@ -1,0 +1,122 @@
+<div class="modal_education" *ngIf="isOpen">
+    <div class="modal-content_education">
+      <div class="modal-content_education__title">
+        <div><p id="title">Add Education</p></div>
+      </div>
+      <div class="modal-content_education__options">
+        <form [formGroup]="myform">
+          <div class="input-wrapper">
+            <input type="text" formControlName="school" id="school" required />
+            <label for="school">school </label>
+            <span
+              *ngIf="
+                myform.get('school')?.touched &&
+                myform.get('school').hasError('required')
+              "
+              style="color: red"
+              >this field is required</span
+            >
+          </div>
+          <!-- <div class="input-wrapper">
+            <input type="text" formControlName="degree" id="Degree_of_Study" required />
+            <label for="Degree_of_Study">Degree_of_Study</label>
+            <span
+              *ngIf="
+                myform.get('degree')?.touched &&
+                myform.get('degree').hasError('required')
+              "
+              style="color: red"
+              >this field is required
+              <hr />
+            </span>
+          </div> -->
+          <div class="input-wrapper">
+            <input type="text" formControlName="country" id="country" required />
+            <label for="country">Country</label>
+            <span
+              *ngIf="
+                myform.get('country')?.touched &&
+                myform.get('country').hasError('required')
+              "
+              style="color: red"
+              >this field is required <br
+            /></span>
+          </div>
+          <div class="input-wrapper">
+            <input
+              type="text"
+              formControlName="field"
+              id="Field"
+              required
+            />
+            <label for="Field">Field</label>
+            <span
+              *ngIf="
+                myform.get('field').touched &&
+                myform.get('field').hasError('required')
+              "
+              style="color: red"
+              >this field is required <br
+            /></span>
+          </div>
+          <div class="input-wrapper">
+            <div class="input-wrapper">
+              <input type="date" formControlName="from" id="from" required />
+              <label for="from">From</label>
+              <span
+                *ngIf="
+                  myform.get('from')?.touched &&
+                  myform.get('from').hasError('required')
+                "
+                style="color: red"
+                >this field is required <br
+              /></span>
+            </div>
+            <div class="input-wrapper">
+              <input type="date" formControlName="to" id="to" required />
+              <label for="to">To</label>
+              <span
+                *ngIf="
+                  myform.get('to')?.touched &&
+                  myform.get('to').hasError('required')
+                "
+                style="color: red"
+                >this field is required <br
+              /></span>
+            </div>
+          </div>
+          <div class="input-wrapper">
+            <div>
+              <p for="description">Description</p>
+            </div>
+            <div>
+              <textarea
+                type="text"
+                formControlName="description"
+                id="description"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+  
+            <span
+              *ngIf="
+                myform.get('description')?.touched &&
+                myform.get('description').hasError('required')
+              "
+              style="color: red"
+              >this field is required
+              <hr />
+            </span>
+          </div>
+        </form>
+      </div>
+      <div class="modal-content_education__buttons">
+        <strong style="cursor: pointer" (click)="back()">Cancel</strong>
+        <button type="button" [disabled]="myform.invalid" (click)="send_Data()">
+          <p>Next</p>
+        </button>
+      </div>
+    </div>
+  </div>
+  

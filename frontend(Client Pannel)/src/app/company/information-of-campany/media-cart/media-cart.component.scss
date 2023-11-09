@@ -1,0 +1,42 @@
+@import "../../../mixins";
+@import "../../../variables";
+
+.media {
+  @include boxsize(20vh, 15vw);
+  @include flex(center);
+  @include flex-directions(column);
+  // background-color: red;
+
+  &__image {
+    flex: 90%;
+    @include flex(center);
+    @include boxsize(100%, 100%);
+    #facebook {
+      @include boxsize(10vh, 10vw);
+      color: #0d5be3;
+    }
+    #twitter{
+        @include boxsize(10vh, 10vw);
+        color: #6494e8;
+    }
+    #instagram{
+        @include boxsize(10vh, 10vw);
+        color: #e30d2d;
+    }
+    #linkedin{
+        @include boxsize(10vh, 10vw);
+        color: #005eff;
+    }
+  }
+  &__name {
+    flex: 10%;
+    @include flex(center);
+    @include boxsize(100%, 100%);
+
+    p {
+      color: $secondary-color;
+      @include font-size(text1_2);
+      @include font-weight(meduim);
+    }
+  }
+}

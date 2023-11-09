@@ -1,0 +1,440 @@
+@import "./../mixins";
+@import "./../variables";
+@import "./portfolio.scss";
+
+
+@keyframes slide-right {
+  from {
+    background-position: 70% center;
+  }
+  to {
+    background-position: 80% center;
+  }
+}
+
+.perso-info {
+  background-color: $bg-white-color;
+  @include boxsize(100%, 100%);
+  @include flex(center);
+  @include flex-directions(column);
+
+  &__logo {
+    @include boxsize(10vh, 100%);
+    display: flex;
+    align-items: center;
+    p {
+      @include font-size(titre_nav);
+      @include font-weight(bold);
+      color: $secondary-color;
+      padding-left: 5%;
+    }
+  }
+  &-etat {
+    @include boxsize(12vh, 90%);
+    @include flex(center);
+    @include flex-directions(column);
+    img {
+      @include boxsize(55%, 80%);
+    }
+    div {
+      margin-top: 2%;
+      @include boxsize(50%, 80%);
+      @include flex-directions(row);
+      display: flex;
+      justify-content: space-between;
+      p {
+        @include font-size(text0);
+        color: $praimary-color;
+        @include font-weight(bold);
+      }
+      p:nth-child(2) {
+        padding-left: 1%;
+      }
+      p:nth-child(1) {
+        padding-left: 5%;
+      }
+    }
+  }
+  &-wc {
+    @include boxsize(100%, 100%);
+    @include flex(center);
+    @include flex-directions(column);
+    margin-top: 2%;
+
+    &__base {
+      @include boxsize(30vh, 75%);
+      @include flex(center);
+      @include flex-directions(column);
+      border: 0.8px solid #3333334f;
+      border-radius: $border-redius;
+
+      div {
+        @include boxsize(100%, 100%);
+      }
+      &__title {
+        flex: 30%;
+        align-items: center;
+        display: flex;
+        padding-left: 5%;
+        padding-top: 3%;
+        p {
+          @include font-size(text1);
+          @include font-weight(meduim);
+        }
+      }
+      &__second {
+        flex: 35%;
+        @include flex-directions(row);
+        div {
+          flex: 50%;
+          @include boxsize(100%, 80%);
+          @include flex(center);
+
+          .input-wrapper {
+            @include boxsize(60%, 100%);
+            @include flex-directions(column);
+            position: relative;
+
+            &__para {
+              margin-top: 2%;
+              @include font-size(for_forms);
+            }
+
+            .span_show {
+              position: relative;
+              top: -70%;
+              cursor: pointer;
+            }
+
+            input {
+              border: none;
+              border-bottom: 1.5px solid #ddd;
+              @include boxsize(75%, 80%);
+              @include font-size(for_forms);
+              padding-top: 2%;
+
+              &:focus {
+                outline: none;
+              }
+              &:focus + label {
+                transform: translateY(-15px);
+                @include font-size(for_forms);
+                color: #333;
+                @include flex(center);
+              }
+              &:valid {
+                + .form-label {
+                  top: -1rem;
+                  font-size: 0.8rem;
+                  // color: #be1010;
+                }
+              }
+            }
+
+            label {
+              @include font-size(for_forms);
+              position: absolute;
+              top: 1%;
+              left: 10%;
+              transition: all 0.2s ease-in-out;
+              color: #999;
+            }
+            span {
+              @include font-size(required);
+              @include boxsize(100%, 90%);
+
+              margin-top: 2%;
+              display: flex;
+              justify-content: end;
+              // background-color: red
+            }
+          }
+        }
+        .forskills {
+          @include flex-directions(column);
+          margin-right: 7%;
+          margin-left: 1%;
+
+          &__title {
+            @include boxsize(auto, 100%);
+            @include flex-directions(row);
+
+            &__p {
+              flex: 50%;
+              @include flex(left);
+              @include boxsize(30%, 100%);
+              p {
+                @include font-size(for_forms);
+                @include font-weight(regular);
+                color: #999;
+              }
+            }
+            &__btn {
+              flex: 50%;
+              @include boxsize(100%, 100%);
+              display: flex;
+              justify-content: end;
+              button {
+                @include boxsize(100%, 18%);
+                @include flex(center);
+                border-radius: 50%;
+                border: $border-btn;
+                background-color: $bg-white-color;
+                cursor: pointer;
+                background-position: center;
+                background-image: url("./../../assets/plus.png");
+                background-repeat: no-repeat;
+                background-size: 30%;
+              }
+            }
+          }
+          .input-wrapper {
+            @include flex-directions(row);
+            @include boxsize(auto,100%);
+            border-bottom: $border-bott;
+            .skill {
+              @include flex(left);
+              p {
+                border: $border-bott;
+                border-radius: $border-redius;
+                @include flex(center);
+                padding: 5px;
+                &:hover {
+                  color: $bg-white-color;
+                  background-color: $praimary-color;
+                  @include font-weight(meduim);
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+      }
+      &__third {
+        flex: 35%;
+        @include flex-directions(row);
+        div {
+          flex: 50%;
+          @include boxsize(100%, 80%);
+          @include flex(center);
+
+          .input-wrapper {
+            @include boxsize(60%, 100%);
+            @include flex-directions(column);
+            position: relative;
+
+            &__para {
+              margin-top: 2%;
+              @include font-size(for_forms);
+            }
+
+            .span_show {
+              position: relative;
+              top: -70%;
+              cursor: pointer;
+            }
+
+            select {
+              border: none;
+              border-bottom: 1.5px solid #ddd;
+              @include boxsize(75%, 80%);
+              @include font-size(for_forms);
+              padding-top: 2%;
+
+              &:focus {
+                outline: none;
+              }
+              &:focus + label {
+                transform: translateY(-15px);
+                @include font-size(for_forms);
+                color: #333;
+                @include flex(center);
+              }
+              &:valid {
+                + .form-label {
+                  top: -1rem;
+                  font-size: 0.8rem;
+                  // color: #be1010;
+                }
+              }
+            }
+
+            label {
+              @include font-size(for_forms);
+              position: absolute;
+              top: 1%;
+              left: 10%;
+              transition: all 0.2s ease-in-out;
+              color: #999;
+            }
+            span {
+              @include font-size(required);
+              @include boxsize(100%, 80%);
+              margin-top: 2%;
+              display: flex;
+              justify-content: end;
+            }
+          }
+        }
+      }
+    }
+    &__rate {
+      @include boxsize(10vh, 75%);
+      @include flex(center);
+      @include flex-directions(row);
+      margin-top: 3%;
+      border: 0.8px solid #3333334f;
+      border-radius: $border-redius;
+      &__title {
+        flex: 40%;
+        @include boxsize(100%, 100%);
+        display: flex;
+        align-items: center;
+        padding-left: 5%;
+
+        p {
+          @include font-size(text1_2);
+          @include font-weight(meduim);
+        }
+      }
+
+      .input-wrapper {
+        flex: 50%;
+        @include boxsize(60%, 100%);
+        @include flex-directions(column);
+
+        position: relative;
+
+        &__para {
+          margin-top: 2%;
+          @include font-size(for_forms);
+        }
+
+        .span_show {
+          position: relative;
+          top: -70%;
+          cursor: pointer;
+        }
+
+        input {
+          border: none;
+          border-bottom: 1.5px solid #ddd;
+          @include boxsize(75%, 80%);
+          @include font-size(for_forms);
+          padding-top: 2%;
+
+          &:focus {
+            outline: none;
+          }
+          &:focus + label {
+            transform: translateY(-15px);
+            @include font-size(for_forms);
+            color: #333;
+            @include flex(center);
+          }
+          &:valid {
+            + .form-label {
+              top: -1rem;
+              font-size: 0.8rem;
+            }
+          }
+        }
+
+        label {
+          @include font-size(for_forms);
+          position: absolute;
+          top: 1%;
+          left: 10%;
+          transition: all 0.2s ease-in-out;
+          color: #999;
+        }
+        span {
+          @include font-size(required);
+          @include boxsize(100%, 80%);
+
+          margin-top: 2%;
+          display: flex;
+          justify-content: end;
+        }
+      }
+      &__hr {
+        flex: 10;
+        display: flex;
+        align-items: center;
+        @include boxsize(100%, 100%);
+        p {
+          @include font-size(text1_2);
+          @include font-weight(meduim);
+        }
+      }
+    }
+  }
+  &-btn {
+    @include boxsize(20vh, 100%);
+    @include flex(center);
+    margin-top: 2%;
+
+    button {
+      @include flex-directions(row);
+      @include boxsize(30%, 10%);
+      border: none;
+      border-radius: 7px;
+      background-color: $secondary-color;
+      margin-left: 3%;
+      cursor: pointer;
+
+      p {
+        @include boxsize(100%, 100%);
+        @include flex(left);
+        padding-left: 14%;
+        @include font-weight(bold);
+        @include font-size(text1);
+        color: $bg-white-color;
+      }
+      p:last-child {
+        @include flex(center);
+        background-image: url("../../assets/fleches.png");
+        background-repeat: no-repeat;
+        background-position: 70% center;
+        background-size: 12%;
+      }
+
+      &:hover {
+        p:last-child {
+          animation: slide-right 0.2s ease-in-out forwards;
+        }
+      }
+      &:disabled {
+        background-color: #002b5899;
+        p:last-child {
+          animation: none;
+        }
+      }
+    }
+  }
+}
+.create {
+  @include boxsize(100%, 100%);
+  @include flex-directions(column);
+  flex: 55%;
+  display: flex;
+
+  button {
+    @include boxsize(30%, 45%);
+    border: none;
+    border-radius: 7px;
+    background-color: $secondary-color;
+    cursor: pointer;
+    flex: 35%;
+    p {
+      @include boxsize(100%, 100%);
+      @include flex(center);
+      @include font-weight(bold);
+      @include font-size(text1);
+      color: $bg-white-color;
+    }
+    &:disabled {
+      background-color: #002b5899;
+    }
+  }
+}

@@ -1,0 +1,105 @@
+@import "./../../mixins";
+@import "./../../variables";
+@import "./filter.scss";
+.home-company {
+  min-height: 100vh;
+  width: 100%;
+  @include flex(center);
+  @include flex-directions(column);
+  nav {
+    flex: 50%;
+    position: relative;
+    @include boxsize(50%, 100%);
+    margin-top: 6%;
+    img {
+      margin-left: 7%;
+      @include boxsize(80%, 85%);
+    }
+  }
+  &__workers {
+    flex: 70%;
+    @include boxsize(100%, 80%);
+    @include flex-directions(row);
+    display: flex;
+    align-items: flex-start;
+    &__list {
+      margin-left: 2%;
+      flex: 70%;
+      @include flex(center);
+      display: block;
+      @include boxsize(100%, 100%);
+      &__search {
+        @include flex(center);
+        @include boxsize(5vh, 100%);
+        @include flex-directions(row);
+        input {
+          border: $border-btn;
+          flex: 90%;
+          @include boxsize(100%, 100%);
+          padding-left: 3%;
+          @include font-size(text1_2);
+          border-radius: 10px 0 0 0;
+          &:placeholder-shown {
+            // height: 80%;
+            color: $secondary-color;
+          }
+          &::placeholder {
+            @include font-size(text1);
+          }
+        }
+        &__filter {
+          border: $border-btn;
+          flex: 10%;
+          @include boxsize(100%, 100%);
+          cursor: pointer;
+          border-radius: 0 10px 0 0;
+          background-color:$praimary-color ;
+          color: $bg-white-color;
+          @include font-size(for_forms)
+        }
+      }
+      &__table {
+        @include flex(center);
+        @include boxsize(100%, 100%);
+        display: block;
+        border: $border-bott;
+        background-color: #f7f2f26f;
+        padding-left: 1%;
+        padding-top: 1%;
+        border-radius: 0 0 10px 10px;
+      }
+      &__pages {
+        @include flex(end);
+        @include boxsize(7vh, 100%);
+        position: relative;
+        background-color: $background-table;
+        border-top: none;
+        border-radius: $border-redius;
+        margin-top: 1%;
+        border: $border-btn;
+        padding-right: 5%;
+
+        button{
+          @include boxsize(70%, 15%);
+          border: none;
+          border-radius: $border-redius;
+          background-color: $secondary-color;
+          color: $bg-white-color;
+          @include font-size(text1);
+          margin-left: 3%;
+          cursor: pointer;
+          &:disabled{
+            background-color:#002b5863 ;
+          }
+        }
+      }
+    }
+  }
+  footer {
+    // flex: 30%;
+    width: 100%;
+    height: 40vh;
+    margin-top: 2%;
+    background-color:$secondary-color;
+  }
+}

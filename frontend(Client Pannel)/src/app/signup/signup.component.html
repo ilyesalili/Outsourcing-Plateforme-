@@ -1,0 +1,107 @@
+<article class="signup">
+  <div class="signup__logo">
+    <p>excellence</p>
+  </div>
+  <div class="signup-card">
+    <div class="signup-card__forform">
+      <div class="signup-card__forform__title">
+        <p>Sign Up</p>
+      </div>
+      <div class="signup-card__forform__form">
+        <app-spiner *ngIf="loading"></app-spiner>
+
+        <form [formGroup]="form" (ngSubmit)="CreateUSer()" *ngIf="!loading">
+          <div class="input-wrapper">
+            <input type="text" formControlName="email" id="email" required />
+            <label for="email">Emial</label>
+            <span
+              *ngIf="
+                form.get('email').touched &&
+                form.get('email').hasError('required')
+              "
+              style="color: red"
+              >this field is required
+              <hr />
+            </span>
+            <span
+              *ngIf="
+                form.get('email').touched && form.get('email').hasError('email')
+              "
+              style="color: red"
+            >
+              Invalid email format
+            </span>
+          </div>
+          <div class="input-wrapper">
+            <input
+              [type]="show ? 'text' : 'password'"
+              formControlName="password"
+              id="password"
+            />
+
+            <label for="password">PassWord</label>
+            <span
+              *ngIf="
+                form.get('password').touched &&
+                form.get('password').hasError('required')
+              "
+              style="color: red"
+              >this field is required <br
+            /></span>
+            <span
+              *ngIf="form.get('password').hasError('minlength')"
+              style="color: red"
+              >this field must be more then 6 charts <br
+            /></span>
+            <span class="span_show" (click)="toggleShow()">{{
+              show ? "Hide" : "Show"
+            }}</span>
+          </div>
+          <div class="input-wrapper">
+            <input
+              [type]="isshow ? 'text' : 'password'"
+              formControlName="confirm_password"
+              id="confirm_password"
+            />
+
+            <label for="confirm_password">Confirm Password</label>
+            <span
+              *ngIf="
+                form.get('confirm_password').touched &&
+                form.get('confirm_password').hasError('required')
+              "
+              style="color: red"
+              >this field is required <br
+            /></span>
+            <span class="span_show" (click)="isshow = !isshow">{{
+              isshow ? "Hide" : "Show"
+            }}</span>
+          </div>
+
+          <div class="input-wrapper">
+            <p class="input-wrapper__para">
+              By creating an account you agree to the &nbsp;&nbsp;<strong
+                style="color: green; cursor: pointer"
+                >Terms of Use</strong
+              >
+            </p>
+          </div>
+          <div class="create">
+            <button type="submit" [disabled]="form.invalid">
+              <p>Create Account</p>
+            </button>
+            <div class="create__signin">
+              <p class="create__signin__para">
+                You have an account?&nbsp;&nbsp;<strong
+                  style="color: green; cursor: pointer"
+                  (click)="GoToLogIn()"
+                  >Sign In</strong
+                >
+              </p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</article>

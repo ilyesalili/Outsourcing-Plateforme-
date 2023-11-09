@@ -1,0 +1,179 @@
+<article class="personal-info">
+  <div class="personal-info__logo">
+    <p>excellence</p>
+  </div>
+  <div class="personal-info-etat">
+    <img src="./../../assets/perso_info.png" alt="" />
+    <div>
+      <p>Upload your CV</p>
+      <p>Personal informations</p>
+      <p>Work and Education</p>
+    </div>
+  </div>
+  <div class="personal-info-wc">
+    <form [formGroup]="myform" (ngSubmit)="send_data()">
+      <div class="info">
+        <div class="input-wrapper">
+          <input type="text" formControlName="firstname" id="firstname" required />
+          <label for="firstname">FirstName</label>
+          <span
+            *ngIf="
+              myform.get('firstname').touched &&
+              myform.get('firstname').hasError('required')
+            "
+            style="color: red"
+            >this field is required
+            <hr />
+          </span>
+        </div>
+        <div class="input-wrapper">
+          <input type="text" formControlName="lastname" id="lastname" required />
+          <label for="lastname">LastName</label>
+          <span
+            *ngIf="
+              myform.get('lastname').touched &&
+              myform.get('lastname').hasError('required')
+            "
+            style="color: red"
+            >this field is required
+            <hr />
+          </span>
+        </div>
+        <div class="input-wrapper">
+          <div class="chose_country">
+            <select
+              (change)="onCountryChange($event)"
+              formControlName="country"
+              required
+            >
+              <option value="">Select a country</option>
+              <option
+                *ngFor="let country of countries$ | async"
+                [value]="country.code"
+              >
+                {{ country.name }} ({{ country.dial_code }})
+              </option>
+            </select>
+            <span
+              *ngIf="
+                myform.get('country').touched &&
+                myform.get('country').hasError('required')
+              "
+              style="color: red"
+              >this field is required
+              <hr />
+            </span>
+          </div>
+          <div class="phone">
+            <input
+              type="text"
+              formControlName="phonenumber"
+              id="phone-number"
+              input type="text" pattern="[0-9]*"
+              maxlength="9"
+              required
+            />
+            <label for="phone-number">Phone</label>
+            <span
+              *ngIf="
+                myform.get('phonenumber').touched &&
+                myform.get('phonenumber').hasError('required')
+              "
+              style="color: red"
+              >this field is required
+              <hr />
+            </span>
+            <span
+              *ngIf="
+                myform.get('phonenumber').touched &&
+                myform.get('phonenumber').hasError('phonenumberinvalid')
+              "
+              style="color: red"
+              >Phone number must not start with 0.
+              <hr />
+            </span>
+          </div>
+        </div>
+        <div class="input-wrapper">
+          <input type="text" formControlName="address" id="address" required />
+          <label for="address">Address</label>
+          <span
+            *ngIf="
+              myform.get('address').touched &&
+              myform.get('address').hasError('required')
+            "
+            style="color: red"
+            >this field is required
+            <hr />
+          </span>
+        </div>
+
+        <div class="input-wrapper">
+          <div class="input-wrapper">
+            <input type="text" formControlName="region" id="region" required />
+            <label for="region">Region</label>
+            <span
+              *ngIf="
+                myform.get('region').touched &&
+                myform.get('region').hasError('required')
+              "
+              style="color: red"
+              >this field is required <br
+            /></span>
+          </div>
+          <div class="input-wrapper">
+            <input
+              type="text"
+              formControlName="zip_code"
+              id="zip_code"
+              required
+            />
+            <label for="zip_code">Zip code</label>
+            <span
+              *ngIf="
+                myform.get('zip_code').touched &&
+                myform.get('zip_code').hasError('required')
+              "
+              style="color: red"
+              >this field is required <br
+            /></span>
+          </div>
+        </div>
+        <div class="input-wrapper">
+          <input type="text" formControlName="city" id="city" required />
+          <label for="city">City</label>
+          <span
+            *ngIf="
+              myform.get('city').touched &&
+              myform.get('city').hasError('required')
+            "
+            style="color: red"
+            >this field is required
+            <hr/>
+          </span>
+        </div>
+      </div>
+      <div class="image">
+        <div id="image-div">
+          <label for="img">
+            <img src="./../../assets/profil.png" alt="upload" id="img_file" />
+            <p id="name_image">Upload Picture</p>
+          </label>
+          <input
+            id="img"
+            type="file"
+            accept="image/*"
+            #fileInput
+            (change)="onFileSelected($event)"
+          />
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="personal-info-btn">
+    <button type="button" [disabled]="myform.invalid" (click)="GoToCard()">
+    <p>Next</p>
+    <p></p>
+    </button>
+  </div>
+</article>

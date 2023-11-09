@@ -1,0 +1,320 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+}
+
+@keyframes slide-right {
+  from {
+    background-position: 70% center;
+  }
+  to {
+    background-position: 80% center;
+  }
+}
+.personal-info {
+  background-color: #ffffff;
+  height: 98vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.personal-info__logo {
+  flex: 10%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.personal-info__logo p {
+  font-size: 16pt;
+  font-weight: 700;
+  color: #002a58;
+  padding-left: 5%;
+}
+.personal-info-etat {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 10%;
+}
+.personal-info-etat img {
+  height: 50%;
+  width: 70%;
+}
+.personal-info-etat div {
+  margin-top: 2%;
+  height: 50%;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+}
+.personal-info-etat div p {
+  font-size: 12pt;
+}
+.personal-info-etat div p:nth-child(2),
+.personal-info-etat div p:nth-child(1) {
+  padding-left: 5%;
+}
+.personal-info-etat div p:nth-child(2):nth-child(1),
+.personal-info-etat div p:nth-child(1):nth-child(1) {
+  color: #2b7b60;
+  font-weight: 700;
+}
+.personal-info-etat div p:nth-child(2):nth-child(2),
+.personal-info-etat div p:nth-child(1):nth-child(2) {
+  color: #2b7b60;
+  font-weight: 700;
+}
+.personal-info-wc {
+  flex: 60%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.personal-info-wc form {
+  height: 95%;
+  width: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border: 0.5px solid rgba(51, 51, 51, 0.3098039216);
+  border-radius: 10px;
+}
+.personal-info-wc form .info {
+  flex: 60%;
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 3%;
+  padding-right: 10%;
+}
+.personal-info-wc form .info .input-wrapper {
+  height: 15%;
+  width: 100%;
+  flex: 25%;
+  position: relative;
+  margin-bottom: 6%;
+}
+.personal-info-wc form .info .input-wrapper__para {
+  margin-top: 1%;
+  font-size: 10pt;
+}
+.personal-info-wc form .info .input-wrapper input {
+  border: none;
+  border-bottom: 1.5px solid #ddd;
+  height: 100%;
+  width: 100%;
+  font-size: 10pt;
+  padding-top: 2%;
+}
+.personal-info-wc form .info .input-wrapper input:focus {
+  outline: none;
+}
+.personal-info-wc form .info .input-wrapper input:focus + label {
+  transform: translateY(-15px);
+  font-size: 10pt;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.personal-info-wc form .info .input-wrapper input:valid + .form-label {
+  top: -1rem;
+  font-size: 0.8rem;
+}
+.personal-info-wc form .info .input-wrapper label {
+  font-size: 10pt;
+  position: absolute;
+  top: 1%;
+  left: 0%;
+  transition: all 0.2s ease-in-out;
+  color: #999;
+}
+.personal-info-wc form .info .input-wrapper span {
+  font-size: 8pt;
+  margin-top: 1%;
+  display: flex;
+  justify-content: end;
+}
+.personal-info-wc form .info .input-wrapper:nth-child(3) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.personal-info-wc form .info .input-wrapper:nth-child(3) .chose_country {
+  flex: 40%;
+}
+.personal-info-wc form .info .input-wrapper:nth-child(3) .chose_country select {
+  border: none;
+  width: 80%;
+  padding-bottom: 1.5%;
+  border-bottom: 1.5px solid #ddd;
+}
+.personal-info-wc form .info .input-wrapper:nth-child(3) .chose_country span {
+  margin-right: 20%;
+}
+.personal-info-wc form .info .input-wrapper:nth-child(3) .phone {
+  flex: 60%;
+}
+.personal-info-wc form .info .input-wrapper:nth-child(3) .phone input {
+  margin-top: 1%;
+}
+.personal-info-wc form .info .input-wrapper:nth-child(3) .phone label {
+  left: 40%;
+}
+.personal-info-wc form .info .input-wrapper:nth-child(5) {
+  height: 90%;
+  width: 100%;
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.personal-info-wc form .info .input-wrapper:nth-child(5) div {
+  height: 100%;
+  width: 100%;
+  padding-right: 10%;
+}
+.personal-info-wc form .info .input-wrapper:nth-child(5) div:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.personal-info-wc form .info .input-wrapper:nth-child(5) div:nth-child(1) span {
+  margin-left: 35%;
+}
+.personal-info-wc form .image {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 40%;
+}
+.personal-info-wc form .image div {
+  height: 70%;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px solid rgba(51, 51, 51, 0.3098039216);
+  border-radius: 10px;
+}
+.personal-info-wc form .image div input[type=file] {
+  display: none;
+}
+.personal-info-wc form .image div label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80%;
+  width: 80%;
+  cursor: pointer;
+}
+.personal-info-wc form .image div label img {
+  height: 90%;
+  width: 90%;
+  border: 0.5px solid rgba(51, 51, 51, 0.3098039216);
+  border-radius: 50%;
+}
+.personal-info-wc form .image div label p {
+  margin-top: 10%;
+  font-weight: 400;
+  font-size: 12pt;
+}
+.personal-info-btn {
+  flex: 20%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.personal-info-btn button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 35%;
+  width: 15%;
+  border: none;
+  border-radius: 7px;
+  background-color: #002a58;
+  margin-left: 3%;
+  cursor: pointer;
+}
+.personal-info-btn button p {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 14%;
+  font-weight: 700;
+  font-size: 13pt;
+  color: #ffffff;
+}
+.personal-info-btn button p:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../assets/fleches.png");
+  background-repeat: no-repeat;
+  background-position: 70% center;
+  background-size: 12%;
+}
+.personal-info-btn button:hover p:last-child {
+  animation: slide-right 0.2s ease-in-out forwards;
+}
+.personal-info-btn button:disabled {
+  background-color: rgba(0, 43, 88, 0.6);
+}
+.personal-info-btn button:disabled p:last-child {
+  animation: none;
+}/*# sourceMappingURL=personal-info.component.css.map */

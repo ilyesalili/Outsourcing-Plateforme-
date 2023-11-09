@@ -1,0 +1,27 @@
+@import "../../mixins";
+@import "../../variables";
+.cart {
+  @include boxsize(15vh, 13vw);
+  @include flex(center);
+  @include flex-directions(column);
+  margin-top: 2%;
+  padding-left: 5%;
+
+  &__image{
+    flex: 90%;
+    @include boxsize(100%,100%);
+    background-image: cover;
+    background-repeat: no-repeat;
+    img{
+        @include boxsize(100%,100%);
+    }
+  }
+  &__title{
+    flex: 10%;
+    @include boxsize(100%,100%);
+    @include flex(center);
+    color: $secondary-color;
+    @include font-size(text1_2);
+    @include font-weight(meduim)
+  }
+}

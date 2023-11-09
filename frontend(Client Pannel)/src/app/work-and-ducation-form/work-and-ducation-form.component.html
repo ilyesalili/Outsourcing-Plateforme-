@@ -1,0 +1,200 @@
+<article class="perso-info">
+  <div class="perso-info__logo">
+    <p>excellence</p>
+  </div>
+  <div class="perso-info-etat">
+    <img src="./../../assets/all_g.png" alt="" />
+    <div>
+      <p>Upload your CV</p>
+      <p>ID Card</p>
+      <p>Work and Education</p>
+    </div>
+  </div>
+  <form [formGroup]="form" class="perso-info-wc">
+    <div class="perso-info-wc__base">
+      <div class="perso-info-wc__base__title">
+        <p>Professional Informations</p>
+      </div>
+
+      <div class="perso-info-wc__base__second">
+        <div>
+          <div class="input-wrapper">
+            <input type="text" formControlName="title" id="title" required />
+            <label for="title">Title</label>
+            <span
+              *ngIf="
+                form.get('title').touched &&
+                form.get('title').hasError('required')
+              "
+              style="color: red"
+              >this field is required <br
+            /></span>
+          </div>
+        </div>
+        <div class="forskills">
+          <div class="forskills__title">
+            <div class="forskills__title__p">
+              <p>Skills</p>
+            </div>
+            <div class="forskills__title__btn">
+              <button (click)="openSkillsPopup()"><i class="fas fa-plus"></i></button>
+              <app-popup-skills
+                [isOpen]="isModalOpen"
+                (close)="closeSkillsPopup()"
+                (close)="isModalOpenskill = false"
+                (skillsChange)="handleSkillsChange($event)"
+
+              ></app-popup-skills>
+            </div>
+          </div>
+          <div class="input-wrapper">
+            <div class="skill" *ngFor="let item of parentSkills.slice(0, 3)">
+              <p>{{ item.name }}</p>
+            </div>
+            <p *ngIf="parentSkills.length > 3">
+              +{{ parentSkills.length - 3 }}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="perso-info-wc__base__third">
+        <div>
+          <div class="input-wrapper">
+            <label for="category">Category </label>
+            <select formControlName="category" id="category" required="">
+              <option *ngFor="let option of listOfCategories" [value]="option">
+                {{ option.name }}
+              </option>
+            </select>
+            <span
+              *ngIf="
+                form.get('category')?.touched &&
+                form.get('category').hasError('required')
+              "
+              style="color: red"
+              >this field is required</span
+            >
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+    <div class="perso-info-wc__rate">
+      <div class="perso-info-wc__rate__title">
+        <p>Hourly Rate</p>
+      </div>
+      <div class="input-wrapper">
+        <input type="text" formControlName="rate" id="rate" required />
+        <label for="rate">Hourly Rate</label>
+        <span
+          *ngIf="
+            form.get('rate').touched && form.get('rate').hasError('required')
+          "
+          style="color: red"
+          >this field is required <br
+        /></span>
+      </div>
+      <div class="perso-info-wc__rate__hr">
+        <p>/hr</p>
+      </div>
+    </div>
+    <div class="perso-info-wc__prot">
+      <div class="perso-info-wc__prot__cat">
+        <div class="perso-info-wc__prot__cat__title">
+          <div class="perso-info-wc__prot__cat__title__p">
+            <p>Employement History</p>
+          </div>
+          <div class="perso-info-wc__prot__cat__title__btn">
+            <button (click)="employementOpen = true"><i class="fas fa-plus"></i></button>
+            <app-popup-model
+              [isOpen]="employementOpen"
+              *ngIf="employementOpen"
+              (close)="employementOpen = false"
+              [workExperiences]="parentWorkExperiences"
+              (workExperiencesChange)="handleWorkExperiencesChange($event)"
+            ></app-popup-model>
+          </div>
+        </div>
+        <div class="perso-info-wc__prot__cat__detail">
+          <ng-container *ngFor="let item of parentWorkExperiences; let index = index">
+            <app-employment-cart [data]="item" (delete)="deleteWorkExperience(index)" ></app-employment-cart>
+          </ng-container>
+          
+        </div>
+      </div>
+      <div class="perso-info-wc__prot__cat">
+        <div class="perso-info-wc__prot__cat__title">
+          <div class="perso-info-wc__prot__cat__title__p">
+            <p>Education</p>
+          </div>
+          <div class="perso-info-wc__prot__cat__title__btn">
+            <button (click)="educationOpen = true"><i class="fas fa-plus"></i></button>
+            <app-popup-education
+              [isOpen]="educationOpen"
+              (close)="educationOpen = false"
+              [arrayEducation]="parentEducation"
+              (Changeeducaion)="handleEducationChange($event)"
+            ></app-popup-education>
+          </div>
+        </div>
+        <div class="perso-info-wc__prot__cat__detail">
+          <ng-container *ngFor="let item of parentEducation; let index = index">
+            <app-education-cart [data]="item" (delete)="deleteEducation(index)"></app-education-cart>
+          </ng-container>
+          
+        </div>
+      </div>
+      <div class="perso-info-wc__prot__cat">
+        <div class="perso-info-wc__prot__cat__title">
+          <div class="perso-info-wc__prot__cat__title__p">
+            <p>Certafications</p>
+          </div>
+          <div class="perso-info-wc__prot__cat__title__btn">
+            <button (click)="certafucation = true"><i class="fas fa-plus"></i></button>
+            <app-popup-certafication
+              [isOpen]="certafucation"
+              (close)="certafucation = false"
+              [arrayCertafications]="parentCertaficats"
+              (ChangeCertafication)="handleCertaficatChange($event)"
+            ></app-popup-certafication>
+          </div>
+        </div>
+        <div class="perso-info-wc__prot__cat__detail">
+          <ng-container *ngFor="let item of parentCertaficats; let index = index">
+            <app-certaficat-cart [data]="item" (delete)="deleteCertafication(index)"></app-certaficat-cart>
+          </ng-container>
+          
+        </div>
+      </div>
+      <div class="perso-info-wc__prot__cat">
+        <div class="perso-info-wc__prot__cat__title">
+          <div class="perso-info-wc__prot__cat__title__p">
+            <p>Portfolio</p>
+          </div>
+          <div class="perso-info-wc__prot__cat__title__btn">
+            <button (click)="portfolio = true"><i class="fas fa-plus"></i></button>
+            <app-popup-portfolio
+              [isOpen]="portfolio"
+              (close)="portfolio = false"
+              [ArrayOfProject]="parentProtfolio"
+              (changeArrayOfProject)="handleProetfolioChange($event)"
+            ></app-popup-portfolio>
+          </div>
+        </div>
+        <div class="perso-info-wc__prot__cat__detail" style="display: flex;flex-wrap: wrap;gap: 5%;flex-direction: row;">
+          <ng-container *ngFor="let item of parentProtfolio; let index = index">
+            <app-projet-cart [data]="item" (delete)="deleteProjet(index)"></app-projet-cart>
+          </ng-container>
+          
+        </div>
+      </div>
+    </div>
+  </form>
+  <div class="perso-info-btn">
+    <strong>Skip</strong>
+    <button type="button" (click)="send_data()">
+      <p>Next</p>
+      <p></p>
+    </button>
+  </div>
+</article>

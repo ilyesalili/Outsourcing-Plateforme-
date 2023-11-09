@@ -1,0 +1,51 @@
+<nav class="nav">
+  <div class="nav__title">
+    <p [@scrollFromRight]> {{ "title" | translate }}</p>
+    <select  [@scrollFromRight] (change)="changeLanguage(selectedLanguage)" [(ngModel)]="selectedLanguage">
+      <option value="Eng">English</option>
+      <option value="Fr">French</option>
+      <option value="Ar">العربية</option>
+    </select>
+  </div>
+  <ul  class="nav__ul">
+    <li [@scrollFromRight]>
+      <button  (click)="setActivePage('Dashborad')">
+        {{ "Dashboard" | translate }}
+      </button>
+    </li>
+    <li [@scrollFromRight]>
+      <button (click)="setActivePage('Admins')">
+        {{ "Admins" | translate }}
+      </button>
+    </li>
+    <li [@scrollFromRight]>
+      <button (click)="setActivePage('Workes')">
+        {{ "Worker" | translate }}
+      </button>
+    </li>
+    <li [@scrollFromRight]>
+      <button (click)="setActivePage('Clients')">
+        {{ "Clients" | translate }}
+      </button>
+    </li>
+    <li [@scrollFromRight]>
+      <button (click)="setActivePage('Jobs')">
+        {{ "Jobs" | translate }}</button>
+    </li>
+    <li [@scrollFromRight]>
+      <button (click)="setActivePage('Archive')">
+        {{ "Archive" | translate }}
+      </button>
+    </li>
+    <li [@scrollFromRight]>
+      <button (click)="setActivePage('Settings')">
+        {{ "Settings" | translate }}
+      </button>
+    </li>
+  </ul>
+  <div class="nav__logout">
+    <button [@scrollFromRight] (click)="setActivePage('logout')">
+      {{ "logout" | translate }}
+    </button>
+  </div>
+</nav>

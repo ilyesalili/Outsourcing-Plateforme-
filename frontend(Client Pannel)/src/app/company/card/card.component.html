@@ -1,0 +1,19 @@
+<article>
+  <app-navbar class="nav"></app-navbar>
+  <div class="panier">
+    <div class="panier__title">
+      <strong routerLink="/home"> < Back to choosing </strong>
+      <p>Total of </p>&nbsp;&nbsp;<strong>{{workers.length}}</strong><p>workers selected</p>
+    </div>
+    <div class="panier__workers">
+      <div class="panier__workers__list">
+        <ng-container *ngFor="let item of workers">
+          <app-user-in-card [data]="item"></app-user-in-card>
+        </ng-container>
+      </div>
+    </div>
+    <div class="panier__submit">
+      <button (click)="Submit()">submit</button>
+    </div>
+  </div>
+</article>

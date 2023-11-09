@@ -1,0 +1,185 @@
+
+@import "./../../mixins";
+@import "./../../variables";
+.modal_media {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $popup-color;
+  @include flex(center);
+}
+
+.modal-content_media {
+  background-color: $bg-white-color;
+  @include boxsize(40vh, 40vw);
+  @include flex-directions(column);
+  @include flex(center);
+  border-radius: $border-redius;
+
+  &__title {
+    position: relative;
+    flex: 15%;
+    @include flex-directions(column);
+    @include boxsize(100%, 100%);
+    div {
+      @include boxsize(100%, 100%);
+      display: flex;
+      align-items: center;
+
+      #title {
+        @include font-size(text1_2);
+        @include font-weight(meduim);
+        position: relative;
+        left: 10%;
+      }
+      &:nth-child(1) {
+        padding-top: 5%;
+        flex: 60%;
+      }
+    }
+  }
+  &__options {
+    flex: 55%;
+    @include boxsize(100%, 85%);
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+
+    form {
+      @include boxsize(100%, 90%);
+      @include flex-directions(column);
+      .input-wrapper {
+        flex: 50%;
+        @include boxsize(100%, 100%);
+        position: relative;
+        margin-bottom: 3%;
+        &__para {
+          margin-top: 2%;
+          @include font-size(for_forms);
+        }
+
+        .span_show {
+          position: relative;
+          top: -70%;
+          cursor: pointer;
+        }
+
+        input {
+          border: none;
+          border-bottom: 1.5px solid #ddd;
+          @include boxsize(80%, 100%);
+          @include font-size(for_forms);
+          padding-top: 2%;
+
+          &:focus {
+            outline: none;
+          }
+          &:focus + label {
+            transform: translateY(-15px);
+            @include font-size(for_forms);
+            color: #333;
+            @include flex(center);
+          }
+          &:valid {
+            + .form-label {
+              top: -1rem;
+              font-size: 0.8rem;
+            }
+          }
+        }
+
+        label {
+          @include font-size(for_forms);
+          position: absolute;
+          top: 1%;
+          left: 0%;
+          transition: all 0.2s ease-in-out;
+          color: #999;
+        }
+        span {
+          @include font-size(required);
+          margin-top: 2%;
+          display: flex;
+          justify-content: end;
+        }  
+        select{
+            border: none;
+            border-bottom: 1.5px solid #ddd;
+            @include boxsize(60%, 100%);
+            @include font-size(for_forms);
+            padding-top: 2%;
+        } 
+        select option{
+            color: red;
+        } 
+      }
+    }
+  }
+  &__buttons {
+    flex: 30%;
+    @include boxsize(100%, 100%);
+    @include flex-directions(row);
+    display: flex;
+    justify-content: end;
+    button {
+      @include boxsize(30%, 20%);
+      @include flex(center);
+      border: none;
+      border-radius: 7px;
+      background-color: $secondary-color;
+      margin-left: 3%;
+      margin-right: 3%;
+      cursor: pointer;
+      p {
+        @include boxsize(100%, 100%);
+        @include flex(center);
+        @include font-weight(bold);
+        @include font-size(text0);
+        color: $bg-white-color;
+      }
+      &:disabled {
+        background-color: #002b5899;
+      }
+    }
+  }
+}
+
+.title {
+  flex: 50%;
+  @include boxsize(100%, 100%);
+  @include flex-directions(row);
+
+  &__p {
+    flex: 50%;
+    @include flex(left);
+    @include boxsize(30%, 100%);
+    p {
+      @include font-size(for_forms);
+      @include font-weight(regular);
+      color: #999;
+    }
+  }
+  &__btn {
+    flex: 50%;
+    @include boxsize(100%, 100%);
+    display: flex;
+    justify-content: end;
+    button {
+      @include boxsize(100%, 10%);
+      @include flex(center);
+      border-radius: 50%;
+      border: $border-btn;
+      background-color: $bg-white-color;
+      cursor: pointer;
+      background-position: center;
+      background-image: url("./../../../assets/plus.png");
+      background-repeat: no-repeat;
+      background-size: 30%;
+
+      
+    }
+  }
+}
+

@@ -1,0 +1,221 @@
+@import "./../../mixins";
+@import "./../../variables";
+
+@keyframes slide-right {
+  from {
+    background-position: 70% center;
+  }
+  to {
+    background-position: 80% center;
+  }
+}
+
+.company {
+  background-color: $bg-white-color;
+  @include boxsize(150vh, 100%);
+  @include flex(center);
+  @include flex-directions(column);
+
+  &__logo {
+    flex: 8%;
+    @include boxsize(100%, 100%);
+    display: flex;
+    align-items: center;
+    p {
+      @include font-size(text2);
+      @include font-weight(bold);
+      color: $secondary-color;
+      padding-left: 5%;
+    }
+  }
+
+  &__info {
+    flex: 82%;
+    // background-color: red;
+    @include boxsize(40vh, 100%);
+    @include flex-directions(column);
+    display: flex;
+    justify-content: center;
+    &__title {
+      @include boxsize(100%, 100%);
+      flex: 10%;
+      align-items: center;
+      display: flex;
+      padding-left: 10%;
+      p {
+        @include font-size(title);
+        @include font-weight(meduim);
+        @include font-weight(bold);
+        color: $secondary-color;
+      }
+    }
+    &__input {
+      flex: 90%;
+      @include boxsize(90%, 75%);
+      display: flex;
+      flex-direction: column;
+      &__base {
+        flex: 45%;
+        @include boxsize(30%, 100%);
+        @include flex-directions(column);
+        border: 0.8px solid #3333334f;
+        border-radius: 10px;
+
+        .input-wrapper {
+          flex: 25%;
+          @include boxsize(80%, 100%);
+          @include flex-directions(column);
+          position: relative;
+          .span_show {
+            position: relative;
+            top: -20%;
+            cursor: pointer;
+          }
+
+          input {
+            border: none;
+            border-bottom: 1.5px solid #ddd;
+            @include boxsize(40%, 80%);
+            @include font-size(for_forms);
+            padding-top: 2%;
+
+            &:focus {
+              outline: none;
+            }
+            &:focus + label {
+              transform: translateY(-15px);
+              @include font-size(text1);
+              color: $secondary-color;
+            //   color: #333;
+              @include flex(center);
+            }
+            &:valid {
+              + .form-label {
+                top: -1rem;
+                font-size: 0.8rem;
+              }
+            }
+          }
+          label {
+            @include font-size(text1_2);
+            position: absolute;
+            top: 30%;
+            left: 10%;
+            transition: all 0.2s ease-in-out;
+            color: #999;
+          }
+          span {
+            @include font-size(required);
+            width: 80%;
+            // @include boxsize(100%, 90%);
+            padding-top: 2%;
+            display: flex;
+            justify-content: end;
+          }
+        }
+      }
+      &__media {
+        flex: 25%;
+        @include boxsize(30%, 100%);
+        @include flex(center);
+        @include flex-directions(column);
+        margin-top: 5%;
+        border: 0.8px solid #3333334f;
+        border-radius: 10px;
+        &__cat {
+            @include boxsize(80%, 100%);
+            @include flex-directions(column);
+        
+            &__title {
+                flex: 20%;
+              @include boxsize(100%, 100%);
+              @include flex-directions(row);
+        
+              &__p {
+                flex: 50%;
+                @include boxsize(100%, 100%);
+                display: flex;
+                padding-left: 5%;
+                align-items: center;
+                p {
+                  @include font-size(text3);
+                  @include font-weight(bold);
+                  color: $secondary-color;
+                }
+              }
+              &__btn {
+                flex: 50%;
+                @include boxsize(80%, 80%);
+                display: flex;
+                padding-right: 3%;
+                justify-content: end;
+                button {
+                  @include boxsize(100%, 10%);
+                  @include flex(center);
+                  border-radius: 50%;
+                  border: $border-btn;
+                  background-color: $bg-white-color;
+                  cursor: pointer;
+                  background-position: center;
+                  background-image: url("./../../../assets/plus.png");
+                  background-repeat: no-repeat;
+                  background-size: 30%;
+                }
+              }
+            }
+            &__reseau{
+                flex: 80%;
+                @include boxsize(100%, 100%);
+                @include flex(center);
+                p{
+                    @include font-weight(text3);
+                    color: $praimary-color;
+                }
+            }
+          }
+      }
+    }
+  }
+  &__btn {
+    @include boxsize(20vh, 100%);
+    @include flex(center);
+
+    button {
+      @include flex-directions(row);
+      @include boxsize(30%, 10%);
+      border: none;
+      border-radius: 7px;
+      background-color: $secondary-color;
+      margin-left: 3%;
+      cursor: pointer;
+
+      p {
+        @include boxsize(100%, 100%);
+        @include flex(left);
+        padding-left: 14%;
+        @include font-weight(bold);
+        @include font-size(text1);
+        color: $bg-white-color;
+      }
+      p:last-child {
+        @include flex(center);
+        background-image: url("./../../../assets/fleches.png");
+        background-repeat: no-repeat;
+        background-position: 70% center;
+        background-size: 12%;
+      }
+
+      &:hover {
+        p:last-child {
+          animation: slide-right 0.2s ease-in-out forwards;
+        }
+      }
+      &:disabled {
+        background-color: #002b5899;
+        p:last-child {
+          animation: none;
+        }
+      }
+    }
+  }
+}

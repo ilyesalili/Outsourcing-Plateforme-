@@ -1,0 +1,99 @@
+<div class="modal_certafication" *ngIf="isOpen">
+    <div class="modal-content_certafication">
+      <div class="modal-content_certafication__title">
+        <div><p id="title">Add Certafication</p></div>
+      </div>
+      <div class="modal-content_certafication__options">
+        <form [formGroup]="myform">
+          <div class="input-wrapper">
+            <input type="text" formControlName="title" id="company" required />
+            <label for="title">Title </label>
+            <span
+              *ngIf="
+                myform.get('title')?.touched &&
+                myform.get('title').hasError('required')
+              "
+              style="color: red"
+              >this field is required</span
+            >
+          </div>
+          <div class="input-wrapper">
+            <input type="text" formControlName="url" id="url" required />
+            <label for="url">url</label>
+            <span
+              *ngIf="
+                myform.get('url')?.touched &&
+                myform.get('url').hasError('required')
+              "
+              style="color: red"
+              >this field is required
+              <hr />
+            </span>
+          </div>
+          <div class="input-wrapper">
+            <input type="date" formControlName="date_taken" id="country" required />
+            <label for="date_taken">Issued at</label>
+            <span
+              *ngIf="
+                myform.get('date_taken')?.touched &&
+                myform.get('date_taken').hasError('required')
+              "
+              style="color: red"
+              >this field is required <br
+            /></span>
+          </div>
+          <div class="input-wrapper">
+            <input
+              type="text"
+              formControlName="company"
+              required
+            />
+            <label for="company">Company</label>
+            <span
+              *ngIf="
+                myform.get('company').touched &&
+                myform.get('company').hasError('required')
+              "
+              style="color: red"
+              >this field is required <br
+            /></span>
+          </div>
+       
+          <div class="input-wrapper">
+            <div class="title">
+              <div class="title__p">
+                <p>Skills</p>
+              </div>
+              <div class="title__btn">
+                <button (click)="isModalOpenskill = true"><i class="fas fa-plus"></i></button>
+                <app-popup-skills
+                [isOpen]="isModalOpenskill"
+                (close)="isModalOpenskill = false"
+                [skillsSelected]="parentSkills"
+                (skillsChange)="handleSkillsChange($event)"
+              ></app-popup-skills>
+              </div>
+            </div>
+            <div class="input-wrapper-skills">
+              <div
+                class="skill"
+                *ngFor="let item of parentSkills.slice(0, 3)"
+              >
+                <p>{{ item.name }}</p>
+              </div>
+              <p id="reste" *ngIf="parentSkills.length > 3">
+                +{{ parentSkills.length - 3 }}
+              </p>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-content_certafication__buttons">
+        <strong style="cursor: pointer" (click)="back()">Cancel</strong>
+        <button type="button" [disabled]="myform.invalid" (click)="send_Data()">
+          <p>Next</p>
+        </button>
+      </div>
+    </div>
+  </div>
+  
